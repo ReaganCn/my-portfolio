@@ -9,3 +9,7 @@
 button {
   outline: none !important;
 }
+
+body {
+  font-family: 'Rubik', Courier, monospace;
+}
