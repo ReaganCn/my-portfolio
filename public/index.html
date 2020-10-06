@@ -10,10 +10,10 @@
     </head>
     <body class="">
         <div id="root"></div>
-        <div id="body-wrapper" class="flex">
+        <div id="body-wrapper" class="flex w-full h-screen">
             <div id="menu-bar" class="flex w-full justify-end my-6">
                 <div id="left-menu" class="absolute left-0 mx-10">
-                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-moon text-xl"></i>
                     <i class="far fa-moon hidden"></i>
                 </div>
                 <div class="absolute flex flex-row text-lg right-0 mr-20" id="menu">
@@ -21,8 +21,21 @@
                     <nav class="md:mx-10">Contact</nav>
                 </div>
             </div>
-            <div id="header" class="flex flex-col w-11/12 mx-auto h-full">
-                <div id="header-text" class="absolute inset-0 flex items-center justify-center"><h1 class="text-6xl">Hello, </br> I'm Charana Reagan</h1></div>
+            <div id="header" class="flex flex-col w-full mx-auto h-full">
+                <!-- <div class="w-20 h-20 rounded-lg bg-black absolute my-auto inset-0 m-1"></div>
+                <div class="w-20 h-20 rounded-lg bg-black absolute my-auto right-0 top-0 bottom-0 m-1"></div> -->
+                
+                
+                <div id="header-title" class="absolute inset-0 flex items-center justify-center flex-col">
+                    
+                    <div>
+                        <span class="text-gray-500 font-thin absolute -mt-20 -ml-32">&lt;Fragment&gt;</span>
+                        <h1 class="text-6xl">Hello, </br> I'm Charana Reagan</h1>
+                        <h3 class="text-2xl text-gray-700">A web developer based in Nairobi, Kenya.</h3>  
+                        <span class="text-gray-500 font-thin absolute mt-12 right-0 mr-64">&lt;/Fragment&gt;</span> 
+                    </div>
+                </div>
+                
             </div>
         </div>
       
