@@ -13,3 +13,7 @@ button {
 body {
   font-family: 'Rubik', Courier, monospace;
 }
+
+#skills-header{
+  transform: rotate(-90deg);
+}

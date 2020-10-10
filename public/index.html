@@ -7,35 +7,71 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/8e781ba583.js" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
     </head>
     <body class="">
         <div id="root"></div>
-        <div id="body-wrapper" class="flex w-full h-screen">
+        <div id="body-wrapper" class="flex w-full h-screen flex-col">
             <div id="menu-bar" class="flex w-full justify-end my-6">
                 <div id="left-menu" class="absolute left-0 mx-10">
-                    <i class="fas fa-moon text-xl"></i>
-                    <i class="far fa-moon hidden"></i>
+                    <span class="flex"><i class="fas fa-moon text-xl"></i><p class="ml-5 self-center font-space-mono tracking-wide font-semibold my-auto">Dark Mode</p></span>
+                    <i class="far fa-moon hidden"></i>                    
                 </div>
-                <div class="absolute flex flex-row text-lg right-0 mr-20" id="menu">
+                <div class="absolute flex flex-row text-lg right-0 mr-12" id="right-menu">
                     <nav class="md:mx-10">Projects</nav>
                     <nav class="md:mx-10">Contact</nav>
                 </div>
             </div>
-            <div id="header" class="flex flex-col w-full mx-auto h-full">
+            <div id="header" class="flex flex-col w-full mx-auto h-auto">
                 <!-- <div class="w-20 h-20 rounded-lg bg-black absolute my-auto inset-0 m-1"></div>
                 <div class="w-20 h-20 rounded-lg bg-black absolute my-auto right-0 top-0 bottom-0 m-1"></div> -->
-                
-                
-                <div id="header-title" class="absolute inset-0 flex items-center justify-center flex-col">
+                <div id="header-title" class="flex items-center justify-center flex-col md:mt-48">
                     
                     <div>
-                        <span class="text-gray-500 font-thin absolute -mt-20 -ml-32">&lt;Fragment&gt;</span>
-                        <h1 class="text-6xl">Hello, </br> I'm Charana Reagan</h1>
+                        <span class="text-gray-400 font-thin absolute -mt-20 -ml-32">&lt;Fragment&gt;</span>
+                        <h1 class="text-6xl">Hello ! </br> I'm Charana Reagan</h1>
                         <h3 class="text-2xl text-gray-700">A web developer based in Nairobi, Kenya.</h3>  
-                        <span class="text-gray-500 font-thin absolute mt-12 right-0 mr-64">&lt;/Fragment&gt;</span> 
+                        <span class="text-gray-400 font-thin absolute mt-12 right-0 mr-64">&lt;/Fragment&gt;</span> 
+                    
                     </div>
                 </div>
+            </div>
+            <div id="skills-section" class="flex mt-48 mx-12">
+                <span class="-ml-12 self-center flex flex-col relative">
+                    <p class="font-space-mono text-xs tracking-wider" id="skills-header">Skills</p>
                 
+                </span>
+
+                <div id="skills-images" class="flex justify-between w-full ml-4">
+                    <div id="skill" >
+                        <img class="h-10" src="public/imgs/skills_logos/javascript.png" />
+                    </div>
+                    <div id="skill" >
+                        <img class="h-10" src="public/imgs/skills_logos/tailwindcss.png" />
+                    </div>
+                    <div id="skill" >
+                        <img class="h-10" src="public/imgs/skills_logos/bootstrap.png" />
+                    </div>
+                    <div id="skill" >
+                        <img class="h-10" src="public/imgs/skills_logos/git1.png" />
+                    </div>
+                    <div id="skill" >
+                        <img class="h-10" src="public/imgs/skills_logos/react.png" />
+                    </div>
+                    <div id="skill" >
+                        <img class="h-10" src="public/imgs/skills_logos/redux.png" />
+                    </div>
+                    <div id="skill" >
+                        <img class="h-10" src="public/imgs/skills_logos/nodejs.png" />
+                    </div>
+                    <div id="skill" >
+                        <img class="h-10" src="public/imgs/skills_logos/mongodb.png" />
+                    </div>
+                    <div id="skill" >
+                        <img class="h-10" src="public/imgs/skills_logos/sql.png" />
+                    </div>
+                </div>
+
             </div>
         </div>
       
