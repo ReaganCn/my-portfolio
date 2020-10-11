@@ -11,18 +11,18 @@
     </head>
     <body class="">
         <div id="root"></div>
-        <div id="body-wrapper" class="flex w-full h-screen flex-col ">
+        <div id="body-wrapper" class="flex w-full h-full flex-col ">
             <div id="menu-bar" class="flex w-full justify-end my-6">
                 <div id="left-menu" class="absolute left-0 mx-10">
                     <span class="flex h-full"><i class="fas fa-moon text-xl"></i><p class="ml-5 self-center font-space-mono tracking-wide font-semibold my-auto">Dark Mode</p></span>
                     <i class="far fa-moon hidden"></i>                    
                 </div>
                 <div class="absolute flex flex-row text-lg right-0 mr-12" id="right-menu">
-                    <nav class="md:mx-10">Projects</nav>
-                    <nav class="md:mx-10">Contact</nav>
+                    <nav class="md:mx-10"><a href="#projects-section">Projects</a></nav>
+                    <nav class="md:mx-10"><a href="#contact-section">Contact</a></nav>
                 </div>
             </div>
-            <div id="header" class="flex flex-col w-full mx-auto h-auto">
+            <div id="header" class="relative flex flex-col w-full mx-auto h-auto">
                 <!-- <div class="w-20 h-20 rounded-lg bg-black absolute my-auto inset-0 m-1"></div>
                 <div class="w-20 h-20 rounded-lg bg-black absolute my-auto right-0 top-0 bottom-0 m-1"></div> -->
                 <div id="header-title" class="flex items-center justify-center flex-col md:mt-48">
@@ -35,6 +35,13 @@
                     
                     </div>
                 </div>
+                <!-- <div id="dots">
+                    <span class=" rounded-full w-4 h-4 bg-black absolute right-0 m-5 self-center"></span>
+                   
+                    <span class=" rounded-full w-4 h-4 bg-black absolute top-0 left-0 m-5"></span>
+                    <span class=" rounded-full w-4 h-4 bg-black absolute bottom-0  left-0 m-5"></span>
+                    <span class=" rounded-full w-4 h-4 bg-black absolute right-0 top-0 m-5"></span>
+                </div> -->
             </div>
             <div id="skills-section" class="flex mt-48 mx-12">
                 <span class="-ml-12 self-center flex flex-col relative">
@@ -74,6 +81,73 @@
 
                 </div>
 
+            </div>
+            <div id="projects-section" class="flex w-11/12 mt-40 mx-12 flex-col">
+                <div id="project1" class="flex mb-32">
+                    <div id="img-section" class="w-2/4 self-center ml-20">
+                        <img src="public/imgs/projects/website-3.png" class="w-3/4"/>
+                    </div>
+                    <div id="info" class="flex w-2/4 flex-col">
+                        <div id="title" class=" text-center text-xl font-semibold my-2">
+                            <i class="fas fa-address-card"></i>
+                            <h2>My portfolio</h2>
+                        </div>
+                        <div id="description" class="w-2/3 text-center mx-auto">
+                            <p class="text-left">
+                                This website is a redesign of my previous portfolio for speed and efficiency.
+                            </p>
+                            <h3 class=" my-2 font-space-mono ml-1 text-left">Technologies:</h3>
+                            <ul class="list-disc font-space-mono list-inside text-left ml-2">
+                                <li>HTML5</li>
+                                <li>ReactJs</li>
+                                <li>Tailwind CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="project2" class="flex mb-32">
+
+                    <div id="info" class="flex w-2/4 flex-col">
+                        <div id="title" class=" text-center text-xl font-semibold my-2">
+                            <h2>My portfolio</h2>
+                        </div>
+                        <div id="description" class="w-2/3 text-center mx-auto">
+                            <p class="text-left">
+                                This website is a redesign of my previous portfolio for speed and efficiency.
+                            </p>
+                            <h3 class=" my-2 font-space-mono ml-1 text-left">Technologies:</h3>
+                            <ul class="list-disc font-space-mono list-inside text-left ml-2">
+                                <li>HTML5</li>
+                                <li>ReactJs</li>
+                                <li>Tailwind CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div id="img-section" class="w-2/4 self-center ml-20">
+                        <img src="public/imgs/projects/website-3.png" class="w-3/4"/>
+                    </div>
+                </div>
+                <div id="project3" class="flex mb-32">
+                    <div id="img-section" class="w-2/4 self-center ml-20">
+                        <img src="public/imgs/projects/website-3.png" class="w-3/4"/>
+                    </div>
+                    <div id="info" class="flex w-2/4 flex-col">
+                        <div id="title" class=" text-center text-xl font-semibold my-2">
+                            <h2>My portfolio</h2>
+                        </div>
+                        <div id="description" class="w-2/3 text-center mx-auto">
+                            <p class="text-left">
+                                This website is a redesign of my previous portfolio for speed and efficiency.
+                            </p>
+                            <h3 class=" my-2 font-space-mono ml-1 text-left">Technologies:</h3>
+                            <ul class="list-disc font-space-mono list-inside text-left ml-2">
+                                <li>HTML5</li>
+                                <li>ReactJs</li>
+                                <li>Tailwind CSS</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
       
