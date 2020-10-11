@@ -11,10 +11,10 @@
     </head>
     <body class="">
         <div id="root"></div>
-        <div id="body-wrapper" class="flex w-full h-screen flex-col">
+        <div id="body-wrapper" class="flex w-full h-screen flex-col ">
             <div id="menu-bar" class="flex w-full justify-end my-6">
                 <div id="left-menu" class="absolute left-0 mx-10">
-                    <span class="flex"><i class="fas fa-moon text-xl"></i><p class="ml-5 self-center font-space-mono tracking-wide font-semibold my-auto">Dark Mode</p></span>
+                    <span class="flex h-full"><i class="fas fa-moon text-xl"></i><p class="ml-5 self-center font-space-mono tracking-wide font-semibold my-auto">Dark Mode</p></span>
                     <i class="far fa-moon hidden"></i>                    
                 </div>
                 <div class="absolute flex flex-row text-lg right-0 mr-12" id="right-menu">
@@ -28,17 +28,17 @@
                 <div id="header-title" class="flex items-center justify-center flex-col md:mt-48">
                     
                     <div>
-                        <span class="text-gray-400 font-thin absolute -mt-20 -ml-32">&lt;Fragment&gt;</span>
+                        <span class="text-gray-400 font-thin absolute -mt-20 -ml-32 font-space-mono">&lt;Fragment&gt;</span>
                         <h1 class="text-6xl">Hello ! </br> I'm Charana Reagan</h1>
                         <h3 class="text-2xl text-gray-700">A web developer based in Nairobi, Kenya.</h3>  
-                        <span class="text-gray-400 font-thin absolute mt-12 right-0 mr-64">&lt;/Fragment&gt;</span> 
+                        <span class="text-gray-400 font-thin absolute mt-12 right-0 mr-64">&lt;/<span class="font-space-mono">Fragment</span>&gt;</span> 
                     
                     </div>
                 </div>
             </div>
             <div id="skills-section" class="flex mt-48 mx-12">
                 <span class="-ml-12 self-center flex flex-col relative">
-                    <p class="font-space-mono text-xs tracking-wider" id="skills-header">Skills</p>
+                    <p class="font-space-mono text-xs tracking-wider font-semibold" id="skills-header">Skills</p>
                 
                 </span>
 
@@ -55,8 +55,9 @@
                     <div id="skill" >
                         <img class="h-10" src="public/imgs/skills_logos/git1.png" />
                     </div>
-                    <div id="skill" >
-                        <img class="h-10" src="public/imgs/skills_logos/react.png" />
+                    <div id="skill" class="flex">
+                        <img class="h-10 animate-spin-slow" src="public/imgs/skills_logos/reactjs.png" />
+                        <span class="self-center text-lg font-medium ml-3 text-react-blue tracking-wider"> React</span>
                     </div>
                     <div id="skill" >
                         <img class="h-10" src="public/imgs/skills_logos/redux.png" />
@@ -70,6 +71,7 @@
                     <div id="skill" >
                         <img class="h-10" src="public/imgs/skills_logos/sql.png" />
                     </div>
+
                 </div>
 
             </div>
