@@ -18,8 +18,8 @@
                     <i class="far fa-moon hidden"></i>                    
                 </div>
                 <div class="absolute flex flex-row text-lg right-0 mr-12" id="right-menu">
-                    <nav class="md:mx-10"><a href="#projects-section">Projects</a></nav>
-                    <nav class="md:mx-10"><a href="#contact-section">Contact</a></nav>
+                    <nav class="md:mx-10"><a href="#projects">Projects</a></nav>
+                    <nav class="md:mx-10"><a href="#contact">Contact</a></nav>
                 </div>
             </div>
             <div id="header" class="relative flex flex-col w-full mx-auto h-auto">
@@ -82,7 +82,7 @@
                 </div>
 
             </div>
-            <div id="projects-section" class="flex w-11/12 mt-40 mx-12 flex-col">
+            <div id="projects" class="flex w-11/12 mt-40 mx-12 flex-col">
                 <div id="project1" class="flex mb-32">
                     <div id="img-section" class="w-2/4 self-center ml-20">
                         <img src="public/imgs/projects/website-3.png" class="w-3/4"/>
@@ -149,6 +149,32 @@
                     </div>
                 </div>
             </div>
+
+            <div id="contact" class="flex w-full mx-auto mb-20 flex-col mt-3">
+                <div class="m-3 text-center mt-0"><h1 class=" text-3xl font-bold">Get in touch.</h1></div>
+                <form class="flex w-6/12 mx-auto flex-col">
+                    <div class="flex justify-between w-11/12 m-3">
+                        <span class="flex flex-col w-11/12 m-3 ml-0">
+                            <label for="name" class="m-2">Your name</label>
+                            <input type="text" name="name"  class=" border border-black p-1 w-full h-8 outline-none"/>
+                        </span>
+                            <span class="flex flex-col w-11/12 m-3 mr-0"> 
+                                <label for="email" class="m-2">Your email</label>
+                                <input type="text" name="email" class=" border border-black p-1 w-full h-8 outline-none"/></span>
+                    </div>
+                    <span class="flex flex-col w-11/12 m-3"> 
+                        <label for="email" class="m-2">Subject</label>
+                        <input type="text" name="email" class=" border border-black p-1 w-full h-8 outline-none"/>
+                    </span>
+                    <span class="flex flex-col w-11/12 m-3"> 
+                            <label for="email" class="m-2">Message</label>
+                            <textarea type="text" name="email" class=" border border-black p-1 w-full h-32 outline-none"></textarea>
+                    </span>
+
+                    <button type="submit" class="border border-black  w-2/12 h-10 mx-auto bg-black text-white hover:text-black hover:bg-white m-3"> Submit <button/>
+                </form>
+            </div>
+
         </div>
       
 
