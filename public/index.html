@@ -12,7 +12,7 @@
     <body class="">
         <div id="root"></div>
         <div id="body-wrapper" class="flex w-full h-full flex-col ">
-            <div id="menu-bar" class="flex w-full justify-end my-6">
+            <div id="menu-bar" class="flex w-full justify-end my-6 z-10">
                 <div id="left-menu" class="absolute left-0 mx-10">
                     <span class="flex h-full"><i class="fas fa-moon text-xl"></i><p class="ml-5 self-center font-space-mono tracking-wide font-semibold my-auto">Dark Mode</p></span>
                     <i class="far fa-moon hidden"></i>                    
@@ -26,13 +26,16 @@
             <div id="header" class="relative flex flex-col w-full mx-auto h-auto">
                 <!-- <div class="w-20 h-20 rounded-lg bg-black absolute my-auto inset-0 m-1"></div>
                 <div class="w-20 h-20 rounded-lg bg-black absolute my-auto right-0 top-0 bottom-0 m-1"></div> -->
-                <div id="header-title" class="flex items-center justify-center flex-col md:mt-48">
+            <div>
+                <img src="/public/imgs/background-1.jpg" class="absolute z-0 -mt-32" />
+            </div>
+                <div id="header-title" class="flex items-center justify-center flex-col md:mt-48 z-10 -ml-48">
                     
                     <div>
-                        <span class="text-gray-400 font-thin absolute -mt-20 -ml-32 font-space-mono">&lt;Fragment&gt;</span>
+                        <span class="text-gray-500 font-thin absolute -mt-20 -ml-32 font-space-mono">&lt;Fragment&gt;</span>
                         <h1 class="text-6xl">Hello ! </br> I'm Charana Reagan</h1>
                         <h3 class="text-2xl text-gray-700">A web developer based in Nairobi, Kenya.</h3>  
-                        <span class="text-gray-400 font-thin absolute mt-12 right-0 mr-64">&lt;/<span class="font-space-mono">Fragment</span>&gt;</span> 
+                        <span class="text-gray-500 font-thin absolute mt-12 right-0 mr-64">&lt;/<span class="font-space-mono">Fragment</span>&gt;<span class="mr-32"></span></span> 
                     
                     </div>
                 </div>
@@ -47,11 +50,12 @@
 
 
             <!-- TAIL SECTION -->
-            <div class="w-full flex" id="tail-section">
+            <div class="w-full flex z-10" id="tail-section">
                 <div id="main" class="flex flex-col w-full">
                      <div id="skills-section" class="flex mt-48 mx-12">
                         <span class="-ml-12 self-center flex flex-col relative">
                             <p class="font-space-mono text-xs tracking-wider font-semibold" id="skills-header">Skills</p>
+
                         </span>
                         <div id="skills-images" class="flex justify-between w-full ml-4">
                         <div id="skill" >
@@ -86,7 +90,7 @@
                     </div>
     
                 </div>
-                <div id="projects" class="flex w-11/12 mt-40 mx-12 flex-col relative h-full justify-center">
+                <div id="projects" class="flex w-11/12 mt-48 mx-12 flex-col relative h-full justify-center">
                     <span class="-ml-12 absolute mr-12">
                         <p class=" font-space-mono text-xs tracking-wider font-bold" id="skills-header">Projects</p>
                     </span>
@@ -134,7 +138,7 @@
                             <img src="public/imgs/projects/website-3.png" class="w-3/4"/>
                         </div>
                     </div>
-                    <div id="project3" class="flex ">
+                    <div id="project3" class="flex">
                         <div id="img-section" class="w-2/4 self-center ml-20">
                             <img src="public/imgs/projects/website-3.png" class="w-3/4"/>
                         </div>
@@ -157,7 +161,7 @@
                     </div>
                 </div>
     
-                <div id="contact" class="flex w-full mx-auto mb-20 flex-col mt-32 h-full justify-center">
+                <div id="contact" class="flex w-full mx-auto mb-20 flex-col mt-40 h-full justify-center">
                     <span class="absolute">
                         <p class="font-space-mono text-xs tracking-wider font-semibold" id="skills-header">Contact</p>
                     </span>
