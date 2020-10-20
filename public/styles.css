@@ -12,6 +12,7 @@ button {
 
 body {
   font-family: 'Rubik', Courier, monospace;
+  color: black;
 }
 
 #skills-header, #projects-header{
