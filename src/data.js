@@ -7,6 +7,14 @@ const Projects = [
       "The front end to complement the URL shortener API for easy usability",
     technologies: ["Javascript", "ReactJs", "Redux", "Tailwind CSS"],
   },
+  {
+    id: 22,
+    icon: "fa-address-card",
+    title: "My portfolio",
+    description:
+      "This website is a redesign of my previous portfolio for speed and efficiency",
+    technologies: ["HTML5","Javascript", "ReactJs", "Tailwind CSS"],
+  },
 ];
 
 const Skills = [

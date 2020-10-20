@@ -1,8 +1,15 @@
 import React from "react";
 
 const ProjectsComponent = (props) => {
+    const isOdd = (number) => {
+        if (number % 2 === 0) {
+          return false;
+        } else {
+          return true;
+        }
+      };
   return (
-    <div id="project1" className="flex mb-32">
+    <div id="project1" className={`flex mb-32 ${isOdd(props.id) && "flex-row-reverse"}`}>
       <div id="img-section" className="w-2/4 self-center ml-20 flex">
         <img src={`public/imgs/projects/${props.id}.png`} className="w-3/4 self-center" />
       </div>

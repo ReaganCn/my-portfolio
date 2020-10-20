@@ -20,7 +20,7 @@ const ContactComponent = () => {
       <form className="flex w-6/12 mx-auto flex-col">
         <div className="flex justify-between w-11/12 m-3">
           <span className="flex flex-col w-11/12 m-3 ml-0">
-            <label for="name" className="m-2">
+            <label htmlFor="name" className="m-2">
               Your name
             </label>
             <input
@@ -30,7 +30,7 @@ const ContactComponent = () => {
             />
           </span>
           <span className="flex flex-col w-11/12 m-3 mr-0">
-            <label for="email" className="m-2">
+            <label htmlFor="email" className="m-2">
               Your email
             </label>
             <input
@@ -41,7 +41,7 @@ const ContactComponent = () => {
           </span>
         </div>
         <span className="flex flex-col w-11/12 m-3">
-          <label for="email" className="m-2">
+          <label htmlFor="email" className="m-2">
             Subject
           </label>
           <input
@@ -51,7 +51,7 @@ const ContactComponent = () => {
           />
         </span>
         <span className="flex flex-col w-11/12 m-3">
-          <label for="email" className="m-2">
+          <label htmlFor="email" className="m-2">
             Message
           </label>
           <textarea

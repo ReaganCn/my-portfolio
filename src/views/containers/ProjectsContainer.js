@@ -4,18 +4,21 @@ import ProjectsComponent from "../components/Projects";
 
 const ProjectsContainer = (props) => {
 
-    const projects = props.data.map((el)=> {
-        return <ProjectsComponent
+
+  const projects = props.data.map((el) => {
+    return (
+      <ProjectsComponent
         key={el.id}
-        id={el.id} 
-        title= {el.title}
-        icon ={el.icon}
-        description = {el.description}
-        technologies = {el.technologies.map (item => {
-            return <li key={item}>{item}</li>
+        id={el.id}
+        title={el.title}
+        icon={el.icon}
+        description={el.description}
+        technologies={el.technologies.map((item) => {
+          return <li key={item}>{item}</li>;
         })}
-        />
-    })
+      />
+    );
+  });
   return (
     <div
       id="projects"
