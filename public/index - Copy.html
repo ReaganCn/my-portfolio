@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Charana Reagan</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/8e781ba583.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    </head>
+    <body class="">
+        <div id="root"></div>
+        <div id="body-wrapper" class="flex w-full h-full flex-col">
+             <!-- MENU -->
+            <div id="menu-bar" class="flex w-full justify-end my-6 z-10">
+                <div id="left-menu" class="absolute left-0 mx-10">
+                    <span class="flex h-full"><i class="fas fa-moon text-xl"></i><p class="ml-5 self-center font-space-mono tracking-wide font-semibold my-auto">Dark Mode</p></span>
+                    <i class="far fa-moon hidden"></i>                    
+                </div>
+                <div class="absolute flex flex-row text-lg right-0 mr-12" id="right-menu">
+                    <nav class="md:mx-10"><a href="#projects">Projects</a></nav>
+                    <nav class="md:mx-10"><a href="#contact">Contact</a></nav>
+                </div>
+            </div>
+            <!-- HEADER SECTION -->
+            <div id="header" class="relative flex flex-col w-full mx-auto h-auto">
+                <!-- <div class="w-20 h-20 rounded-lg bg-black absolute my-auto inset-0 m-1"></div>
+                <div class="w-20 h-20 rounded-lg bg-black absolute my-auto right-0 top-0 bottom-0 m-1"></div> -->
+            <div>
+                <img src="/public/imgs/background-1.jpg" class="absolute z-0 -mt-32" />
+                <img src="/public/imgs/background-2.jpg" class="absolute z-0 -mt-56 w-full hidden" />
+            </div>
+                <div id="header-title" class="flex items-center justify-center flex-col md:mt-48 z-10 -ml-48">
+                    
+                    <div>
+                        <span class="text-gray-500 font-thin absolute -mt-20 -ml-32 font-space-mono">&lt;Fragment&gt;</span>
+                        <h1 class="text-6xl">Hello ! </br> I'm Charana Reagan</h1>
+                        <h3 class="text-2xl text-gray-700">A web developer based in Nairobi, Kenya.</h3>  
+                        <span class="text-gray-500 font-thin absolute mt-12 right-0 mr-64">&lt;/<span class="font-space-mono">Fragment</span>&gt;<span class="mr-32"></span></span> 
+                    
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- TAIL SECTION -->
+            <div class="w-full flex z-10" id="tail-section">
+                <div id="main" class="flex flex-col w-full">
+                     <div id="skills-section" class="flex mt-48 mx-12">
+                        <span class="-ml-12 self-center flex flex-col relative">
+                            <p class="font-space-mono text-xs tracking-wider font-semibold" id="skills-header">Skills</p>
+
+                        </span>
+                        <div id="skills-images" class="flex justify-between w-full ml-4">
+                        <div id="skill" >
+                            <img class="h-10" src="public/imgs/skills_logos/javascript.png" />
+                        </div>
+                        <div id="skill" >
+                            <img class="h-10" src="public/imgs/skills_logos/tailwindcss.png" />
+                        </div>
+                        <div id="skill" >
+                            <img class="h-10" src="public/imgs/skills_logos/bootstrap.png" />
+                        </div>
+                        <div id="skill" >
+                            <img class="h-10" src="public/imgs/skills_logos/git1.png" />
+                        </div>
+                        <div id="skill" class="flex">
+                            <img class="h-10 animate-spin-slow" src="public/imgs/skills_logos/reactjs.png" />
+                            <span class="self-center text-lg font-medium ml-3 text-react-blue tracking-wider"> React</span>
+                        </div>
+                        <div id="skill" >
+                            <img class="h-10" src="public/imgs/skills_logos/redux.png" />
+                        </div>
+                        <div id="skill" >
+                            <img class="h-10" src="public/imgs/skills_logos/nodejs.png" />
+                        </div>
+                        <div id="skill" >
+                            <img class="h-10" src="public/imgs/skills_logos/mongodb.png" />
+                        </div>
+                        <div id="skill" >
+                            <img class="h-10" src="public/imgs/skills_logos/sql.png" />
+                        </div>
+    
+                    </div>
+    
+                </div>
+                <div id="projects" class="flex w-11/12 mt-48 mx-12 flex-col relative h-full justify-center">
+                    <span class="-ml-12 absolute mr-12">
+                        <p class=" font-space-mono text-xs tracking-wider font-bold" id="skills-header">Projects</p>
+                    </span>
+                    <div id="project1" class="flex mb-32">
+                        <div id="img-section" class="w-2/4 self-center ml-20">
+                            <img src="public/imgs/projects/website-3.png" class="w-3/4"/>
+                        </div>
+                        <div id="info" class="flex w-2/4 flex-col">
+                            <div id="title" class=" text-center text-xl font-semibold my-2">
+                                <i class="fas fa-address-card"></i>
+                                <h2>My portfolio</h2>
+                            </div>
+                            <div id="description" class="w-2/3 text-center mx-auto">
+                                <p class="text-left">
+                                    This website is a redesign of my previous portfolio for speed and efficiency.
+                                </p>
+                                <h3 class=" my-2 font-space-mono ml-1 text-left">Technologies:</h3>
+                                <ul class="list-disc font-space-mono list-inside text-left ml-2">
+                                    <li>HTML5</li>
+                                    <li>ReactJs</li>
+                                    <li>Tailwind CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="project2" class="flex mb-32">
+    
+                        <div id="info" class="flex w-2/4 flex-col">
+                            <div id="title" class=" text-center text-xl font-semibold my-2">
+                                <h2>My portfolio</h2>
+                            </div>
+                            <div id="description" class="w-2/3 text-center mx-auto">
+                                <p class="text-left">
+                                    This website is a redesign of my previous portfolio for speed and efficiency.
+                                </p>
+                                <h3 class=" my-2 font-space-mono ml-1 text-left">Technologies:</h3>
+                                <ul class="list-disc font-space-mono list-inside text-left ml-2">
+                                    <li>HTML5</li>
+                                    <li>ReactJs</li>
+                                    <li>Tailwind CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="img-section" class="w-2/4 self-center ml-20">
+                            <img src="public/imgs/projects/website-3.png" class="w-3/4"/>
+                        </div>
+                    </div>
+                    <div id="project3" class="flex">
+                        <div id="img-section" class="w-2/4 self-center ml-20">
+                            <img src="public/imgs/projects/website-3.png" class="w-3/4"/>
+                        </div>
+                        <div id="info" class="flex w-2/4 flex-col">
+                            <div id="title" class=" text-center text-xl font-semibold my-2">
+                                <h2>My portfolio</h2>
+                            </div>
+                            <div id="description" class="w-2/3 text-center mx-auto">
+                                <p class="text-left">
+                                    This website is a redesign of my previous portfolio for speed and efficiency.
+                                </p>
+                                <h3 class=" my-2 font-space-mono ml-1 text-left">Technologies:</h3>
+                                <ul class="list-disc font-space-mono list-inside text-left ml-2">
+                                    <li>HTML5</li>
+                                    <li>ReactJs</li>
+                                    <li>Tailwind CSS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="contact" class="flex w-full mx-auto mb-20 flex-col mt-40 h-full justify-center">
+                    <span class="absolute">
+                        <p class="font-space-mono text-xs tracking-wider font-semibold" id="skills-header">Contact</p>
+                    </span>
+                    <div class="m-3 text-center mt-0"><h1 class=" text-3xl font-bold">Get in touch.</h1></div>
+                    <form class="flex w-6/12 mx-auto flex-col">
+                        <div class="flex justify-between w-11/12 m-3">
+                            <span class="flex flex-col w-11/12 m-3 ml-0">
+                                <label for="name" class="m-2">Your name</label>
+                                <input type="text" name="name"  class=" border border-black p-1 w-full h-8 outline-none"/>
+                            </span>
+                                <span class="flex flex-col w-11/12 m-3 mr-0"> 
+                                    <label for="email" class="m-2">Your email</label>
+                                    <input type="text" name="email" class=" border border-black p-1 w-full h-8 outline-none"/></span>
+                        </div>
+                        <span class="flex flex-col w-11/12 m-3"> 
+                            <label for="email" class="m-2">Subject</label>
+                            <input type="text" name="email" class=" border border-black p-1 w-full h-8 outline-none"/>
+                        </span>
+                        <span class="flex flex-col w-11/12 m-3"> 
+                                <label for="email" class="m-2">Message</label>
+                                <textarea type="text" name="email" class=" border border-black p-1 w-full h-32 outline-none"></textarea>
+                        </span>
+    
+                        <button type="submit" class="border border-black  w-2/12 h-10 mx-auto bg-black text-white hover:text-black hover:bg-white m-3"> Submit <button/>
+                    </form>
+                </div>
+                </div>
+               
+            </div>
+        
+
+        </div>
+      
+
+    </body>
+</html>
