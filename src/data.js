@@ -5,7 +5,7 @@ const Projects = [
     title: "Shortly URL Shortener Front End",
     description:
       "The front end to complement the URL shortener API for easy usability",
-    technologies: ["Javascript", "ReactJs", "Redux", "Tailwind CSS"],
+    technologies: ["HTML5","Javascript", "ReactJs", "Redux", "Tailwind CSS"],
   },
   {
     id: 22,
