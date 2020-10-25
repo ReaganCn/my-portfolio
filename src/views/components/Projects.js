@@ -11,11 +11,11 @@ const ProjectsComponent = (props) => {
   return (
     <div id="project1" className={`flex mb-32 ${isOdd(props.id) && "flex-row-reverse"}`}>
       <div id="img-section" className="w-2/4 self-center ml-20 flex h-full">
-        <img src={`public/imgs/projects/${props.id}.png`} className="w-3/4 self-center -mb-12" />
+        <img src={`public/imgs/projects/${props.id}.png`} className="w-full self-center -mb-12" />
       </div>
       <div id="info" className="flex w-2/4 flex-col">
         <div id="title" className=" text-center text-xl font-semibold my-2">
-          <i className={`fas ${props.icon}`}></i>
+          <i className={`${props.icon}`}></i>
           <h2>{props.title}</h2>
         </div>
         <div id="description" className="w-2/3 text-center mx-auto">
