@@ -6,6 +6,8 @@ const Projects = [
     description:
       "This website is a redesign of my previous portfolio for speed and efficiency",
     technologies: ["HTML5","Javascript", "React Js", "Tailwind CSS"],
+    github: "",
+    live: ""
   },
   {
     id: 25,
@@ -14,6 +16,8 @@ const Projects = [
     description:
       "The front end to complement the URL shortener API for easy usability",
     technologies: ["HTML5","Javascript", "ReactJs", "ReduxJs","Webpack", "Tailwind CSS"],
+    github: "https://github.com/ReaganCn/short-url",
+    live: "https://shortly-project.netlify.app/"
   },
   {
     id: 24,
@@ -22,6 +26,8 @@ const Projects = [
     description:
       "Handles user authetication, URL shortening and URL redirect among other API requests for the Shortly Project",
     technologies: ["Javascript", "NodeJs(Express)","Passport Js Auth", "Mongo DB", "Hosted on Digital Ocean"],
+    github: "https://github.com/ReaganCn/shorturl-nodejs",
+    live: ""
   },
   {
     id: 23,
@@ -30,6 +36,8 @@ const Projects = [
     description:
       "A concept of a programming tutorial website whereby learning is broken into the simplest and smallest bits",
     technologies: ["HTML5","Javascript", "ReactJs","ReduxJs","Webpack", "Bootstrap 4"],
+    github: "https://github.com/ReaganCn/gravel-videos",
+    live: "https://gravel-videos.netlify.app/"
   },
   {
     id: 22,
@@ -38,6 +46,8 @@ const Projects = [
     description:
       "Serves the Gravel Videos Front End by handling video files, extracting the necessary meta data and saving them to the server and the info to the database",
     technologies: ["Javascript", "NodeJs(Express)","Mongo DB", "Hosted on Glitch.com"],
+    github: "https://github.com/ReaganCn/gravevideos-nodejs",
+    live: ""
   },
   {
     id: 21,
@@ -46,6 +56,8 @@ const Projects = [
     description:
       "An application that shows random quotes based on a basic API request with simple animations. Utilizes the Twitter API for sharing.",
     technologies: ["HTML5","Javascript", "ReactJs","Bootstrap 4", "Twitter API"],
+    github: "https://github.com/ReaganCn/random-quotes",
+    live: "https://get-random-quotes.netlify.app/"
   },
 ];
 

@@ -16,6 +16,8 @@ const ProjectsContainer = (props) => {
         technologies={el.technologies.map((item) => {
           return <li key={item}>{item}</li>;
         })}
+        github={el.github}
+        live={el.live}
       />
     );
   });
