@@ -13,15 +13,15 @@ const Projects = [
     title: "Shortly URL Shortener Front End",
     description:
       "The front end to complement the URL shortener API for easy usability",
-    technologies: ["HTML5","Javascript", "ReactJs", "Redux Js","Webpack", "Tailwind CSS"],
+    technologies: ["HTML5","Javascript", "ReactJs", "ReduxJs","Webpack", "Tailwind CSS"],
   },
   {
     id: 24,
-    icon: "fas fa-globe-americas",
+    icon: "fas fa-code",
     title: "Shortly URL Shortener API",
     description:
-      "The front end to complement the URL shortener API for easy usability",
-    technologies: ["Javascript", "Express Js","Passport Js Auth", "Mongo DB"],
+      "Handles user authetication, URL shortening and URL redirect among other API requests for the Shortly Project",
+    technologies: ["Javascript", "NodeJs(Express)","Passport Js Auth", "Mongo DB", "Hosted on Digital Ocean"],
   },
   {
     id: 23,
@@ -29,15 +29,15 @@ const Projects = [
     title: "Gravel Videos",
     description:
       "A concept of a programming tutorial website whereby learning is broken into the simplest and smallest bits",
-    technologies: ["HTML5","Javascript", "ReactJs","Redux Js","Webpack", "Bootstrap 4"],
+    technologies: ["HTML5","Javascript", "ReactJs","ReduxJs","Webpack", "Bootstrap 4"],
   },
   {
     id: 22,
-    icon: "fas fa-play-circle",
+    icon: "fas fa-code",
     title: "Gravel Videos API",
     description:
-      "A concept of a programming tutorial website whereby learning is broken into the simplest and smallest bits",
-    technologies: ["Javascript", "Express Js","Mongo DB"],
+      "Serves the Gravel Videos Front End by handling video files, extracting the necessary meta data and saving them to the server and the info to the database",
+    technologies: ["Javascript", "NodeJs(Express)","Mongo DB", "Hosted on Glitch.com"],
   },
   {
     id: 21,
