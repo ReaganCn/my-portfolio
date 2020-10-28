@@ -1,6 +1,6 @@
 import React from "react";
 
-const ContactComponent = () => {
+const ContactComponent = (props) => {
   return (
     <div
       id="contact"
@@ -26,6 +26,8 @@ const ContactComponent = () => {
             <input
               type="text"
               name="name"
+              value={props.data.name}
+              onChange={props.onChange}
               className=" border border-black p-1 w-full h-8 outline-none"
             />
           </span>
@@ -36,6 +38,8 @@ const ContactComponent = () => {
             <input
               type="text"
               name="email"
+              value={props.data.email}
+              onChange={props.onChange}
               className=" border border-black p-1 w-full h-8 outline-none"
             />
           </span>
@@ -46,7 +50,9 @@ const ContactComponent = () => {
           </label>
           <input
             type="text"
-            name="email"
+            name="subject"
+            value={props.data.subject}
+            onChange={props.onChange}
             className=" border border-black p-1 w-full h-8 outline-none"
           />
         </span>
@@ -56,7 +62,9 @@ const ContactComponent = () => {
           </label>
           <textarea
             type="text"
-            name="email"
+            name="message"
+            value={props.data.message}
+            onChange={props.onChange}
             className=" border border-black p-1 w-full h-32 outline-none"
           ></textarea>
         </span>

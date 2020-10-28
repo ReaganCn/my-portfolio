@@ -7,6 +7,7 @@ import SkillsContainer from "./views/containers/SkillsContainer";
 import ContactComponent from "./views/components/Contact";
 
 import { Projects, Skills } from "./data";
+import ContactContainer from "./views/containers/ContactContainer";
 
 const App = (props) => {
   return (
@@ -18,7 +19,7 @@ const App = (props) => {
           <div id="main" className="flex flex-col w-full">
             <SkillsContainer data={Skills} />
             <ProjectsContainer data={Projects} />
-            <ContactComponent />
+            <ContactContainer />
           </div>
         </div>
       </div>
