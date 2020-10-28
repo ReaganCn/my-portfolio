@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import emailjs from "emailjs-com";
+
 import ContactComponent from "../components/Contact";
 
 const ContactContainer = () => {
@@ -6,27 +8,52 @@ const ContactContainer = () => {
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
   // const [email, setEmail] = useState("");
   // const [subject, setSubject] = useState("");
   // const [message, setMessage] = useState("");
 
-console.log(data.name)
   const handleChange = (event) => {
-    const { field, value } = event.target;
-    setData(prevState => ({
-      ...prevState,
-      [field]: value
-  }));
+    const { name, value } = event.target;
 
+    setData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (event) => {
+    const emailData = {
+      subject: data.subject,
+      message: data.message,
+      from_name: data.name,
+      from_email: data.email,
+    };
+    const templateId = "first_template";
+
+    sendEmail(templateId, emailData);
+
+    event.preventDefault();
+  };
+
+  const sendEmail = (templateId, email) => {
+    emailjs.send("hotmail", templateId, email, 'user_KkdEp8kM7ShrDPVgKin7a').then(
+      (response) => {
+        console.log("SUCCESS!", response.status, response.text);
+      },
+      (err) => {
+        console.log("FAILED...", err);
+      }
+    );
   };
 
   return (
     <ContactComponent
       // data={{ name, email, subject, message }}
-      data = {data}
+      data={data}
       onChange={() => handleChange(event)}
+      onSubmit= {()=> handleSubmit(event)}
     />
   );
 };

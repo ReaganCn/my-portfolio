@@ -17,7 +17,7 @@ const ContactComponent = (props) => {
       <div className="m-3 text-center mt-0">
         <h1 className=" text-3xl font-bold">Get in touch.</h1>
       </div>
-      <form className="flex w-6/12 mx-auto flex-col">
+      <form className="flex w-6/12 mx-auto flex-col" onSubmit={props.onSubmit}>
         <div className="flex justify-between w-11/12 m-3">
           <span className="flex flex-col w-11/12 m-3 ml-0">
             <label htmlFor="name" className="m-2">
