@@ -16,7 +16,7 @@ const MenuComponent = () => {
         {/* <i className="far fa-moon hidden"></i> */}
       </div>
       <div
-          className="flex absolute lg:hidden -mr-20 flex-col self-center"
+          className="flex absolute lg:hidden -mr-20 md:mr-0 flex-col self-center"
           id="right-menu-sm"
         >
           <button className="flex items-center px-3 py-2 text-black border-black float-right">

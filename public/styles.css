@@ -15,6 +15,6 @@ body {
   color: black;
 }
 
-#skills-header, #projects-header{
+#skills-header, #projects-header, #contact-header{
   transform: rotate(-90deg);
 }

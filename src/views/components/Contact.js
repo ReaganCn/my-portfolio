@@ -14,10 +14,10 @@ const ContactComponent = (props) => {
           Contact
         </p>
       </span>
-      <div className="m-3 text-center mt-0">
+      <div className="m-3 text-center mt-0 md:ml-0 ml-32">
         <h1 className=" text-3xl font-bold">Get in touch.</h1>
       </div>
-      <form className="flex w-6/12 mx-auto flex-col" onSubmit={props.onSubmit}>
+      <form className="flex md:w-6/12 w-full md:mx-auto flex-col md:ml-auto ml-16" onSubmit={props.onSubmit}>
         <div className="flex justify-between w-11/12 m-3">
           <span className="flex flex-col w-11/12 m-3 ml-0">
             <label htmlFor="name" className="m-2">
@@ -71,10 +71,9 @@ const ContactComponent = (props) => {
 
         <button
           type="submit"
-          className="border border-black  w-2/12 h-10 mx-auto bg-black text-white hover:text-black hover:bg-white m-3"
+          className="border border-black w-4/12 md:w-2/12 h-10 mx-auto bg-black text-white hover:text-black hover:bg-white m-3"
         >
-          {" "}
-          Submit{" "}
+          Submit
         </button>
       </form>
     </div>
