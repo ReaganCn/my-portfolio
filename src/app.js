@@ -12,11 +12,11 @@ import ContactContainer from "./views/containers/ContactContainer";
 const App = (props) => {
   return (
     <Fragment>
-      <div id="body-wrapper" className="flex w-full h-full flex-col">
+      <div id="body-wrapper" className="flex md:w-full h-full flex-col">
           <MenuComponent />
           <HeaderComponent />
         <div className="w-full flex z-10" id="tail-section">
-          <div id="main" className="flex flex-col w-full">
+          <div id="main" className="flex flex-col w-full text-center">
             <SkillsContainer data={Skills} />
             <ProjectsContainer data={Projects} />
             <ContactContainer />
