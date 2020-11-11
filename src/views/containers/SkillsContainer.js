@@ -7,7 +7,7 @@ const SkillsContainer = (props) => {
   });
   return (
     <div id="skills-section" className="flex md:mt-48 mt-16 md:mx-12">
-      <span className="md:-ml-12 self-center flex flex-col relative">
+      <span className="md:-ml-12 self-center relative hidden md:block">
         <p
           className="font-space-mono text-xs tracking-wider font-semibold"
           id="skills-header"

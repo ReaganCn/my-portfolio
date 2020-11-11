@@ -12,7 +12,7 @@ import ContactContainer from "./views/containers/ContactContainer";
 const App = (props) => {
   return (
     <Fragment>
-      <div id="body-wrapper" className="flex w-full h-full flex-col overflow-x-hidden">
+      <div id="body-wrapper" className="flex w-full h-full flex-col">
           <MenuComponent />
           <HeaderComponent />
         <div className="w-full flex z-10" id="tail-section">
