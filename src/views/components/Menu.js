@@ -2,7 +2,7 @@ import React from "react";
 
 const MenuComponent = () => {
   return (
-    <div id="menu-bar" className="flex w-full justify-end my-6 z-10">
+    <div id="menu-bar" className="flex w-full justify-end my-6 z-10 relative">
       <div
         id="left-menu"
         className="absolute left-0 md:mx-10 mx-3 flex self-center"
@@ -16,7 +16,7 @@ const MenuComponent = () => {
         {/* <i className="far fa-moon hidden"></i> */}
       </div>
       <div
-          className="flex absolute lg:hidden -mr-20 md:mr-0 flex-col self-center"
+          className="flex lg:hidden ml-20 md:mr-0 flex-col self-center"
           id="right-menu-sm"
         >
           <button className="flex items-center px-3 py-2 text-black border-black float-right">
@@ -41,7 +41,7 @@ const MenuComponent = () => {
         </div>
 
       <div
-        className="absolute flex lg:flex-row flex-col text-lg right-0 md:mr-12 -mr-8 self-center invisible lg:visible"
+        className="absolute lg:flex lg:flex-row flex-col text-lg right-0 md:mr-12 lg:-mr-8 self-center invisible lg:visible"
         id="right-menu"
       >
         <nav className={`md:mx-10`}>

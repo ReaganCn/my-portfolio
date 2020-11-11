@@ -13,6 +13,7 @@ button {
 body {
   font-family: 'Rubik', Courier, monospace;
   color: black;
+  overflow-x: hidden;
 }
 
 #skills-header, #projects-header, #contact-header{
