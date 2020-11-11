@@ -41,7 +41,7 @@ const MenuComponent = () => {
         </div>
 
       <div
-        className="absolute lg:flex lg:flex-row flex-col text-lg right-0 md:mr-12 lg:-mr-8 self-center invisible lg:visible"
+        className="absolute lg:flex lg:flex-row flex-col text-lg right-0 self-center invisible lg:visible"
         id="right-menu"
       >
         <nav className={`md:mx-10`}>
