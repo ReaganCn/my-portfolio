@@ -15,7 +15,7 @@ const SkillsContainer = (props) => {
           Skills
         </p>
       </span>
-      <div id="skills-images" className="flex md:justify-between justify-around w-full ml-4 flex-wrap">
+      <div id="skills-images" className="flex md:justify-between justify-around w-full ml-4 flex-wrap lg:flex-no-wrap">
         {skills}
       </div>
     </div>
