@@ -22,13 +22,13 @@ const ProjectsComponent = (props) => {
 
       </div>
       <div id="info" className="flex md:w-2/4 w-full flex-col mx-auto text-center">
-        <div id="title" className=" text-center text-xl font-semibold my-2">
+        <div id="title" className=" text-center md:text-xl text-lg font-semibold my-2">
           <i className={`${props.icon}`}></i>
           <h2>{props.title}</h2>
         </div>
-        <div id="description" className="w-2/3 text-center mx-auto">
-          <p className="text-left">{props.description}</p>
-          <h3 className=" my-2 font-space-mono ml-1 text-left">
+        <div id="description" className="md:w-2/3 w-full mx-auto md:text-base text-sm">
+          <p className="text-left md:mx-auto mx-2">{props.description}</p>
+          <h3 className=" my-2 font-space-mono md:ml-1 mx-2 text-left">
             Technologies:
           </h3>
           <ul className="list-disc font-space-mono list-inside text-left ml-2">

@@ -24,7 +24,7 @@ const ProjectsContainer = (props) => {
   return (
     <div
       id="projects"
-      className="flex w-11/12 mt-48 md:mx-12 flex-col relative h-full justify-center"
+      className="flex md:w-11/12 w-full mt-48 md:mx-12 flex-col relative h-full justify-center"
     >
       <span className="-ml-12 absolute mr-12">
         <p
