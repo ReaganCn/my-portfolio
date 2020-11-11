@@ -2,14 +2,14 @@ import React from "react";
 
 const MenuComponent = () => {
   return (
-    <div id="menu-bar" className="flex w-full justify-end my-6 z-10 relative">
+    <div id="menu-bar" className="flex w-full justify-end md:my-6 my-2 z-10 relative">
       <div
         id="left-menu"
-        className="absolute left-0 md:mx-10 mx-3 flex self-center"
+        className="absolute left-0 md:mx-10 mx-1 flex self-center"
       >
         <span className="flex h-full">
           <i className="fas fa-moon md:text-xl hidden md:visible self-center"></i>
-          <p className="ml-1 md:ml-5 self-center font-space-mono tracking-wide font-semibold my-auto">
+          <p className="md:ml-5 self-center font-space-mono tracking-wide font-semibold my-auto">
             &nbsp; Dark Mode
           </p>
         </span>
