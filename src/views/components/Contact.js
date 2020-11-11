@@ -8,16 +8,16 @@ const ContactComponent = (props) => {
     >
       <span className="absolute">
         <p
-          className="font-space-mono text-xs tracking-wider font-semibold"
+          className="font-space-mono text-xs tracking-wider font-semibold md:ml-auto -ml-4"
           id="skills-header"
         >
           Contact
         </p>
       </span>
-      <div className="m-3 text-center mt-0 md:ml-0 ml-16">
+      <div className="m-3 text-center mt-0 md:ml-0">
         <h1 className=" text-3xl font-bold">Get in touch.</h1>
       </div>
-      <form className="flex md:w-6/12 w-11/12 md:mx-auto flex-col md:ml-auto" onSubmit={props.onSubmit}>
+      <form className="flex md:w-6/12 w-11/12 md:mx-auto flex-col mx-auto" onSubmit={props.onSubmit}>
         <div className="flex justify-between w-11/12 m-3">
           <span className="flex flex-col w-11/12 m-3 ml-0">
             <label htmlFor="name" className="m-2">
