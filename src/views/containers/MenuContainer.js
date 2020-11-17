@@ -1,10 +1,20 @@
-import React from "react";
-import MenuComponent from "../components/Skills";
+import React, { useEffect, useState } from "react";
+import MenuComponent from "../components/Menu";
 
-const MenuContainer = (props) => {
+
+const MenuContainer = () => {
+
+  const [show, setShow] = useState(false);
+
+  const showMiniMenu = () => {
+      show ? setShow(false) : setShow(true);
+  }
 
   return (
-    <MenuComponent />
+   <MenuComponent 
+   onClick = {() => showMiniMenu()}
+   show={show}
+   />
   )
 };
 
