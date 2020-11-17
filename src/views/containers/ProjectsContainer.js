@@ -34,6 +34,9 @@ const ProjectsContainer = (props) => {
           Projects
         </p>
       </span>
+      <div className="m-3 text-center md:-mt-40 lg:mt-0 md:ml-0 -mt-24">
+        <h1 className=" text-3xl font-bold">Projects done.</h1>
+      </div>
       {projects}
     </div>
   );

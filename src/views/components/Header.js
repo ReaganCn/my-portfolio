@@ -15,19 +15,19 @@ const HeaderComponent = () => {
       </div>
       <div
         id="header-title"
-        className="flex items-center justify-center flex-col mt-6 ml-4 lg:mt-48 z-10 lg:-ml-48"
+        className="flex items-center justify-center flex-col mt-6 ml-4 lg:mt-32 xl:mt-48 z-10 xl:-ml-48"
       >
         <div>
-          <span className="text-gray-500 font-thin absolute lg:-mt-20 -mt-12 -ml-32 font-space-mono hidden md:block">
+          <span className="text-gray-500 font-thin absolute lg:-mt-20 -mt-12 -ml-32 font-space-mono hidden md:block lg:text-base text-xs">
             &lt;Fragment&gt;
           </span>
-          <h1 className="lg:text-6xl text-4xl">
+          <h1 className="lg:text-6xl text-5xl">
             Hello ! <br /> I'm Charana Reagan
           </h1>
-          <h3 className="text-2xl text-gray-700">
+          <h3 className="text-2xl text-gray-700 mt-6 md:mt-0">
             A web developer based in Nairobi, Kenya.
           </h3>
-          <span className="text-gray-500 font-thin absolute mt-12 right-0 lg:mr-64 hidden md:block">
+          <span className="text-gray-500 font-thin absolute mt-12 right-0 xl:mr-64 hidden md:block lg:text-base text-xs">
             &lt;/<span className="font-space-mono">Fragment</span>&gt;
             <span className="mr-32"></span>
           </span>
