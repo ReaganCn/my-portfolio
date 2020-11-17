@@ -9,19 +9,19 @@ const MenuComponent = () => {
       >
         <span className="flex h-full">
           <i className="fas fa-moon md:text-xl hidden md:visible self-center"></i>
-          <p className="self-center font-space-mono tracking-wide font-semibold my-auto">
+          <p className="font-space-mono tracking-wide font-semibold my-auto">
             &nbsp; Dark Mode
           </p>
         </span>
         {/* <i className="far fa-moon hidden"></i> */}
       </div>
       <div
-          className="flex lg:hidden ml-20 md:mr-0 flex-col self-center"
+          className="flex lg:hidden md:mr-0 flex-col self-center w-1/3"
           id="right-menu-sm"
         >
-          <button className="flex items-center px-3 py-2 text-black border-black float-right">
+          <button className="flex px-3 py-2 text-black border-black float-right justify-end">
             <svg
-              className="h-4 w-6 fill-black"
+              className="h-4 w-6 fill-black visible"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -30,11 +30,11 @@ const MenuComponent = () => {
             </svg>
             <i className="fas fa-times text-black invisible"></i>
           </button>
-          <div className=" -mb-24 mx-auto hidden">
-          <nav className={`md:mx-10 my-3`}>
+          <div className="flex flex-col -mb-24 text-center bg-black text-white rounded-sm z-20 invisible">
+          <nav className={`my-3`}>
           <a href="#projects">Projects</a>
         </nav>
-        <nav className="md:mx-10 my-6">
+        <nav className="my-3">
           <a href="#contact">Contact</a>
         </nav>
           </div>
