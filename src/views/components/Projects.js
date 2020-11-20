@@ -18,16 +18,18 @@ const ProjectsComponent = (props) => {
       <div
         id="img-section"
         className="md:w-2/4 w-full md:self-center md:ml-20 flex h-full md:my-0 my-10 mx-auto"
+        onMouseEnter={props.onMouseEnter}
+        onMouseLeave={props.onMouseLeave}
       >
         <img
           src={`public/imgs/projects/${props.title}.png`}
-          className={`w-full self-center md:-mb-12 hidden`}
+          className={`w-full self-center md:-mb-12 ${props.showLinks ? "hidden" : ""}`}
          
         />
 
         <div
           id="project-links"
-          className={`md:w-auto md:self-center mx-auto`}
+          className={`md:w-auto md:self-center mx-auto ${props.showLinks ? "" : "hidden"}`}
         >
           <div className="flex flex-col self-center text-lg mx-auto font-semibold">
             <span className="flex">
