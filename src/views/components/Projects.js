@@ -48,7 +48,7 @@ const ProjectsComponent = (props) => {
       </div>
       <div
         id="info"
-        className="flex md:w-full w-full flex-col mx-auto text-center"
+        className="flex md:w-2/4 w-full flex-col mx-auto text-center"
       >
         <div
           id="title"
