@@ -1,15 +1,22 @@
 import React, { useEffect, useState } from "react";
+import { useSwipeable } from "react-swipeable";
 
 import ProjectsComponent from "../components/Projects";
 
 const ProjectsContainer = (props) => {
   const [projects, setProjects] = useState(props.data);
 
+  const handlers = useSwipeable({
+    onSwiped: (eventdata) => console.log("Swiped Mzee!"),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: false,
+  });
+
   useEffect(() => {
-    const projectsModified = props.data.map ((el)=> {
-      el.showLinks = false
+    const projectsModified = props.data.map((el) => {
+      el.showLinks = false;
       return el;
-    })
+    });
     setProjects(projectsModified);
   }, []);
 
@@ -38,12 +45,22 @@ const ProjectsContainer = (props) => {
       <ProjectsComponent
         key={el.id}
         id={el.id}
-        onMouseEnter = {() => mouseEnterImage(el.id)}
-        onMouseLeave = {() => mouseLeaveImage(el.id)}
+        onMouseEnter={() => mouseEnterImage(el.id)}
+        onMouseLeave={() => mouseLeaveImage(el.id)}
+        swipeHandlers = {useSwipeable({
+          onSwiped: (eventdata) => {
+            mouseEnterImage(el.id)
+            setTimeout(()=> {
+              mouseLeaveImage(el.id)
+            }, 3500)
+          },
+          preventDefaultTouchmoveEvent: true,
+          trackMouse: false,
+        })}
         title={el.title}
         icon={el.icon}
         description={el.description}
-        showLinks = {el.showLinks}
+        showLinks={el.showLinks}
         technologies={el.technologies.map((item) => {
           return <li key={item}>{item}</li>;
         })}
@@ -66,7 +83,10 @@ const ProjectsContainer = (props) => {
           Projects
         </p>
       </span>
-      <div className="m-3 text-center md:-mt-40 lg:mt-0 md:ml-0 -mt-24">
+      <div
+        className="m-3 text-center md:-mt-40 lg:mt-0 md:ml-0 -mt-24"
+        {...handlers}
+      >
         <h1 className=" text-3xl font-bold">Projects done.</h1>
       </div>
       {projectsDisplay}
