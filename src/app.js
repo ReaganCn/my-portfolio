@@ -13,12 +13,12 @@ import MenuContainer from "./views/containers/MenuContainer";
 const App = (props) => {
   return (
     <Fragment>
-      <div id="body-wrapper" className="flex w-full h-full flex-col">
+      <div id="body-wrapper" className="flex w-full h-full flex-col mx-auto">
          <MenuContainer />
           <HeaderComponent />
-        <div className="w-full flex z-10" id="tail-section">
+        <div className="w-full flex z-10 relative" id="tail-section">
           <div id="main" className="flex flex-col w-full">
-            <SkillsContainer data={Skills} />
+
             <ProjectsContainer data={Projects} />
             <ContactContainer />
           </div>

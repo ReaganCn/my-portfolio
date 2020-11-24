@@ -1,8 +1,10 @@
 import React from "react";
+import { Skills } from "../../data";
+import SkillsContainer from "../containers/SkillsContainer";
 
 const HeaderComponent = () => {
   return (
-    <div id="header" className="relative flex flex-col w-full mx-auto h-auto">
+    <div id="header" className="relative flex flex-col w-full mx-auto">
       <div>
         <img
           src="/public/imgs/background-1.jpg"
@@ -15,7 +17,7 @@ const HeaderComponent = () => {
       </div>
       <div
         id="header-title"
-        className="flex items-center justify-center flex-col mt-6 ml-4 lg:mt-32 xl:mt-48 z-10 xl:-ml-48"
+        className="flex items-center justify-center flex-col mt-6 ml-4 lg:mt-32 xl:mt-48 z-10 mx-auto w-full"
       >
         <div>
           <span className="text-gray-500 font-thin absolute lg:-mt-20 -mt-12 -ml-32 font-space-mono hidden md:block lg:text-base text-xs">
@@ -33,6 +35,7 @@ const HeaderComponent = () => {
           </span>
         </div>
       </div>
+      <SkillsContainer data={Skills}/>
     </div>
   );
 };
