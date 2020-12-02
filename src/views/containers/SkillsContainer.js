@@ -6,7 +6,7 @@ const SkillsContainer = (props) => {
     return <SkillsComponent key={el.id} id={el.id} name={el.name} />;
   });
   return (
-    <div id="skills-section" className="flex md:mt-48 mt-12 md:mx-12 z-20">
+    <div id="skills-section" className="flex md:mt-48 xl:mt-60 mt-12 md:mx-12 z-20">
       <span className="md:-ml-12 self-center relative hidden md:block">
         <p
           className="font-space-mono text-xs tracking-wider font-semibold"

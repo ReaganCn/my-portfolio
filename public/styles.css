@@ -19,3 +19,24 @@ body {
 #skills-header, #projects-header, #contact-header{
   transform: rotate(-90deg);
 }
+
+@media screen and (min-width : 1520px)
+  {
+  #greetings {
+    font-size: 120px;
+  }
+  #tagline {
+    font-size: 40px;
+  }
+  #header-title {
+    margin-bottom: 8%;
+    margin-top: 11%;
+  }
+}
+
+@media screen and (min-width : 2560px)
+  {
+  #tail-section {
+    margin-top: 11%;
+  }
+}

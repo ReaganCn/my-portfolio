@@ -17,16 +17,16 @@ const HeaderComponent = () => {
       </div>
       <div
         id="header-title"
-        className="flex items-center justify-center flex-col mt-6 ml-4 lg:mt-32 xl:mt-48 z-10 mx-auto w-full"
+        className="flex items-center justify-center flex-col mt-10 lg:mt-32 xl:mt-48 z-10 mx-auto w-full"
       >
         <div>
           <span className="text-gray-500 font-thin absolute lg:-mt-20 -mt-12 -ml-32 font-space-mono hidden md:block lg:text-base text-xs">
             &lt;Fragment&gt;
           </span>
-          <h1 className="lg:text-6xl text-5xl">
+          <h1 className="lg:text-6xl text-5xl 2xl:text-7xl" id="greetings">
             Hello ! <br /> I'm Charana Reagan
           </h1>
-          <h3 className="text-2xl text-gray-700 mt-6 md:mt-0">
+          <h3 className="text-2xl text-gray-700 mt-6 md:mt-0" id="tagline">
             A web developer based in Nairobi, Kenya.
           </h3>
           <span className="text-gray-500 font-thin absolute mt-12 right-0 xl:mr-64 hidden md:block lg:text-base text-xs">
