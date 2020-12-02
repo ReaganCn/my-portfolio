@@ -7,11 +7,11 @@ const HeaderComponent = () => {
     <div id="header" className="relative flex flex-col w-full mx-auto">
       <div>
         <img
-          src="/public/imgs/background-1.jpg"
+          src="public/imgs/background-1.jpg"
           className="absolute z-0 -mt-32 md:block hidden xl:w-full"
         />
         <img
-          src="/public/imgs/background-2.jpg"
+          src="public/imgs/background-2.jpg"
           className="absolute z-0 -mt-56 w-full hidden"
         />
       </div>
