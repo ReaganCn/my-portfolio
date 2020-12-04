@@ -24,14 +24,14 @@ const MenuComponent = (props) => {
           onClick={props.onClick}
           >
             <svg
-              className={`h-4 w-6 fill-black ${props.show ? "invisible" : "visible"}`}
+              className={`h-4 w-6 ${props.darkMode ? " fill-current text-white" : " fill-black"} ${props.show ? "invisible" : "visible"}`}
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
             >
               <title>Menu</title>
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
             </svg>
-            <i className={`fas fa-times text-black ${props.show ? "visible" : "invisible"}`}></i>
+            <i className={`fas fa-times ${props.darkMode ? "text-white" : " text-black"} ${props.show ? "visible" : "invisible"}`}></i>
           </button>
           <div className={`flex flex-col -mb-24 text-center bg-black text-white rounded-sm z-20 ${props.show ? "visible" : "invisible"}`}>
           <nav className={`my-3`}>

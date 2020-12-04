@@ -21,6 +21,7 @@ const App = (props) => {
     <Fragment>
       <div id="body-wrapper" className={`flex w-full h-full flex-col mx-auto ${darkMode ? "text-white bg-black" : "text-black bg-white"}`}>
          <MenuContainer
+         darkMode={darkMode}
                toggleDark={() => toggleDark()}
          />
           <HeaderComponent 

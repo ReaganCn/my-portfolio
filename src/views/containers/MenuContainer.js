@@ -12,6 +12,7 @@ const MenuContainer = (props) => {
 
   return (
     <MenuComponent
+      darkMode = {props.darkMode}
       setDark ={props.toggleDark}
       onClick={() => showMiniMenu()}
       show={show}
