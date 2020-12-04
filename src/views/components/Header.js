@@ -4,11 +4,13 @@ import SkillsContainer from "../containers/SkillsContainer";
 
 const HeaderComponent = () => {
   return (
-    <div id="header" className="relative flex flex-col w-full mx-auto">
+    <div id="header" className="relative flex flex-col w-full mx-auto" 
+    // style={{backgroundImage:"url('public/imgs/background-1.jpg')"}}
+    >
       <div>
         <img
           src="public/imgs/background-1.jpg"
-          className="absolute z-0 -mt-32 md:block hidden xl:w-full"
+          className="absolute z-0 -mt-32 lg:block hidden xl:w-full"
         />
         <img
           src="public/imgs/background-2.jpg"
