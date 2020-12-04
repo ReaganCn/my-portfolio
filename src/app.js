@@ -11,11 +11,21 @@ import ContactContainer from "./views/containers/ContactContainer";
 import MenuContainer from "./views/containers/MenuContainer";
 
 const App = (props) => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDark = () => {
+    darkMode ? setDarkMode(false) : setDarkMode(true);
+  };
+  
   return (
     <Fragment>
-      <div id="body-wrapper" className="flex w-full h-full flex-col mx-auto">
-         <MenuContainer />
-          <HeaderComponent />
+      <div id="body-wrapper" className={`flex w-full h-full flex-col mx-auto ${darkMode ? "text-white bg-black" : "text-black bg-white"}`}>
+         <MenuContainer
+               toggleDark={() => toggleDark()}
+         />
+          <HeaderComponent 
+          darkMode={darkMode}
+          />
         <div className="w-full flex z-10 relative" id="tail-section">
           <div id="main" className="flex flex-col w-full">
 
