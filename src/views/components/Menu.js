@@ -10,7 +10,7 @@ const MenuComponent = (props) => {
         <span className="flex h-full">
           <i className="fas fa-moon md:text-xl hidden md:visible self-center"></i>
           <button className="font-space-mono tracking-wide font-semibold my-auto cursor-pointer" onClick={props.setDark}>
-            &nbsp; Dark Mode
+            &nbsp; {`${props.darkMode ? "Light": "Dark"} Mode`}
           </button>
         </span>
         {/* <i className="far fa-moon hidden"></i> */}
