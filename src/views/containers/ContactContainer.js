@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 
 import ContactComponent from "../components/Contact";
 
-const ContactContainer = () => {
+const ContactContainer = (props) => {
   const [data, setData] = useState({
     name: "",
     email: "",
@@ -51,6 +51,7 @@ const ContactContainer = () => {
   return (
     <ContactComponent
       // data={{ name, email, subject, message }}
+      darkMode = {props.darkMode}
       data={data}
       onChange={() => handleChange(event)}
       onSubmit= {()=> handleSubmit(event)}

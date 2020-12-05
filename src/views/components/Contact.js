@@ -28,7 +28,7 @@ const ContactComponent = (props) => {
               name="name"
               value={props.data.name}
               onChange={props.onChange}
-              className=" border border-black p-1 w-full h-8 outline-none"
+              className=" border border-black p-1 w-full h-8 outline-none text-black"
             />
           </span>
           <span className="flex flex-col w-11/12 m-3 mr-0">
@@ -40,7 +40,7 @@ const ContactComponent = (props) => {
               name="email"
               value={props.data.email}
               onChange={props.onChange}
-              className=" border border-black p-1 w-full h-8 outline-none"
+              className=" border border-black p-1 w-full h-8 outline-none text-black"
             />
           </span>
         </div>
@@ -53,7 +53,7 @@ const ContactComponent = (props) => {
             name="subject"
             value={props.data.subject}
             onChange={props.onChange}
-            className=" border border-black p-1 w-full h-8 outline-none"
+            className=" border border-black p-1 w-full h-8 outline-none text-black"
           />
         </span>
         <span className="flex flex-col w-11/12 m-3">
@@ -65,13 +65,13 @@ const ContactComponent = (props) => {
             name="message"
             value={props.data.message}
             onChange={props.onChange}
-            className=" border border-black p-1 w-full h-32 outline-none"
+            className=" border border-black p-1 w-full h-32 outline-none text-black"
           ></textarea>
         </span>
 
         <button
           type="submit"
-          className="border border-black w-4/12 md:w-2/12 h-10 mx-auto bg-black text-white hover:text-black hover:bg-white m-3"
+          className={`border  w-4/12 md:w-2/12 h-10 mx-auto ${props.darkMode ? "bg-black text-white border-white hover:text-black hover:bg-white" : " bg-black text-white  m-3 border-black"}`}
         >
           Submit
         </button>

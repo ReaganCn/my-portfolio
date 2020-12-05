@@ -31,7 +31,9 @@ const App = (props) => {
           <div id="main" className="flex flex-col w-full">
 
             <ProjectsContainer data={Projects} />
-            <ContactContainer />
+            <ContactContainer 
+            darkMode={darkMode}
+            />
           </div>
         </div>
       </div>
