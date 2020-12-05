@@ -48,7 +48,7 @@ const ProjectsContainer = (props) => {
         onMouseEnter={() => mouseEnterImage(el.id)}
         onMouseLeave={() => mouseLeaveImage(el.id)}
         swipeHandlers = {useSwipeable({
-          onSwiped: (eventdata) => {
+          onSwipedLeft: (eventdata) => {
             mouseEnterImage(el.id)
             setTimeout(()=> {
               mouseLeaveImage(el.id)
