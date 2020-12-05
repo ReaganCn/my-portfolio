@@ -51,7 +51,7 @@ const ContactContainer = (props) => {
   return (
     <ContactComponent
       // data={{ name, email, subject, message }}
-      darkMode = {props.darkMode}
+      darkModeContact = {props.darkMode}
       data={data}
       onChange={() => handleChange(event)}
       onSubmit= {()=> handleSubmit(event)}
