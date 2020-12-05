@@ -19,7 +19,7 @@ const HeaderComponent = (props) => {
       </div>
       <div
         id="header-title"
-        className="flex items-center justify-center flex-col mt-10 pl-6 lg:mt-48 xl:mt-48 z-10 md:mx-auto w-full"
+        className="flex items-center justify-center flex-col mt-10 pl-6 lg:mt-48 xl:mt-48 lg:z-10 md:mx-auto w-full"
       >
         <div>
           <span className="text-gray-500 font-thin absolute lg:-mt-20 -mt-12 -ml-32 font-space-mono hidden md:block lg:text-base text-xs">
