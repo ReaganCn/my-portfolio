@@ -6,8 +6,8 @@ const Projects = [
     description:
       "This website is a redesign of my previous portfolio for speed and efficiency",
     technologies: ["HTML5","Javascript", "React Js", "Tailwind CSS"],
-    github: "",
-    live: ""
+    github: "https://github.com/ReaganCn/my-portfolio",
+    live: "https://charanareagan.netlify.app/"
   },
   {
     id: 25,
