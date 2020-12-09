@@ -10,9 +10,13 @@ const ContactContainer = (props) => {
     subject: "",
     message: "",
   });
-  // const [email, setEmail] = useState("");
-  // const [subject, setSubject] = useState("");
-  // const [message, setMessage] = useState("");
+  const [alert, setAlert] = useState("");
+
+  useEffect(() => {
+    if (alert.length !== 0) {
+      console.log(alert);
+    }
+  }, [alert]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -21,6 +25,39 @@ const ContactContainer = (props) => {
       ...prevState,
       [name]: value,
     }));
+  };
+
+  const isFieldEmpty = (object) => {
+    let emptyFieldArray = [];
+    let objectArray = Object.entries(object);
+    //[[key, value], [key, value]]
+    for (let item of objectArray) {
+      if (item[1] === "") {
+        emptyFieldArray.push(item[0]);
+      }
+    }
+    if (emptyFieldArray.length === 0) {
+      return false;
+    } else {
+      return emptyFieldArray;
+    }
+  };
+
+  const sentenceCase = (str) => {
+    let wordArray = str.split("");
+    wordArray[0] = wordArray[0].toUpperCase();
+    return wordArray.join("");
+  };
+
+  const listFields = (arr) => {
+    let newArr = [];
+    for (let item of arr) {
+      if (item !== arr[arr.length - 1]) {
+        item = item + ", ";
+      }
+      newArr.push(sentenceCase(item));
+    }
+    return newArr.join("");
   };
 
   const handleSubmit = (event) => {
@@ -32,29 +69,35 @@ const ContactContainer = (props) => {
     };
     const templateId = "first_template";
 
-    sendEmail(templateId, emailData);
-
+    const fieldsEmpty = isFieldEmpty(data);
+    if (fieldsEmpty ) {
+      setAlert(listFields(fieldsEmpty) + " blank. Failed to Submit!");
+    } else {
+      sendEmail(templateId, emailData);
+    }
     event.preventDefault();
   };
 
   const sendEmail = (templateId, email) => {
-    emailjs.send("hotmail", templateId, email, 'user_KkdEp8kM7ShrDPVgKin7a').then(
-      (response) => {
-        console.log("SUCCESS!", response.status, response.text);
-      },
-      (err) => {
-        console.log("FAILED...", err);
-      }
-    );
+    emailjs
+      .send("hotmail", templateId, email, "user_KkdEp8kM7ShrDPVgKin7a")
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (err) => {
+          console.log("FAILED...", err);
+        }
+      );
   };
 
   return (
     <ContactComponent
       // data={{ name, email, subject, message }}
-      darkModeContact = {props.darkMode}
+      darkModeContact={props.darkMode}
       data={data}
       onChange={() => handleChange(event)}
-      onSubmit= {()=> handleSubmit(event)}
+      onSubmit={() => handleSubmit(event)}
     />
   );
 };
