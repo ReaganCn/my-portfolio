@@ -87,7 +87,7 @@ const ProjectsContainer = (props) => {
         className="m-3 text-center md:-mt-40 lg:mt-0 md:ml-0 -mt-24"
         {...handlers}
       >
-        <h1 className=" text-3xl font-bold">Projects done.</h1>
+        <h1 className=" text-3xl font-bold">My projects.</h1>
       </div>
       {projectsDisplay}
     </div>

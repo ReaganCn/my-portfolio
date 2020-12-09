@@ -71,7 +71,7 @@ const ContactComponent = (props) => {
 
         <button
           type="submit"
-          className={`border  w-4/12 md:w-2/12 h-10 mx-auto ${props.darkModeContact ? "bg-black text-white border-white hover:text-black hover:bg-white" : " bg-black text-white  m-3 border-black"}`}
+          className={`border  w-4/12 md:w-2/12 h-10 mx-auto ${props.darkModeContact ? "bg-black text-white border-white hover:text-black hover:bg-white" : " bg-black text-white  m-3 border-black hover:text-black hover:bg-white"}`}
         >
           Submit
         </button>

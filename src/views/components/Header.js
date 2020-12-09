@@ -23,7 +23,7 @@ const HeaderComponent = (props) => {
       >
         <div>
           <span className="text-gray-500 font-thin absolute lg:-mt-20 -mt-12 -ml-32 font-space-mono hidden md:block lg:text-base text-xs">
-            &lt;Fragment&gt;
+            &lt;React.Fragment&gt;
           </span>
           <h1 className="lg:text-6xl text-5xl 2xl:text-7xl" id="greetings">
             Hello ! <br /> I'm Charana Reagan
@@ -32,7 +32,7 @@ const HeaderComponent = (props) => {
             A web developer based in Nairobi, Kenya.
           </h3>
           <span className="text-gray-500 font-thin absolute mt-12 right-0 xl:mr-64 hidden md:block lg:text-base text-xs">
-            &lt;/<span className="font-space-mono">Fragment</span>&gt;
+            &lt;/<span className="font-space-mono">React.Fragment</span>&gt;
             <span className="mr-32"></span>
           </span>
         </div>
