@@ -35,8 +35,19 @@ body {
 }
 
 @media screen and (min-width : 2560px)
+
   {
+    #greetings {
+      font-size: 130px;
+    }
   #tail-section {
     margin-top: 11%;
+  }
+  #skill-image {
+    height: 4rem;
+  }
+  #header-title {
+    margin-bottom: 10.4%;
+    margin-top: 15%;
   }
 }
