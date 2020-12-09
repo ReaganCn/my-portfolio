@@ -40,7 +40,7 @@ const ContactComponent = (props) => {
               name="email"
               value={props.data.email}
               onChange={props.onChange}
-              className=" border border-black p-1 w-full h-8 outline-none text-black"
+              className= {`border ${props.validEmail ? "border-black" : "border-red-500" } p-1 w-full h-8 outline-none text-black`}
             />
           </span>
         </div>
