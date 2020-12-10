@@ -12,6 +12,7 @@ const ContactContainer = (props) => {
   });
   const [alert, setAlert] = useState("");
   const [validEmail, setvalidEmail] = useState(true);
+  const [loader, setLoader] = useState(false);
 
   const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
@@ -85,13 +86,13 @@ const ContactContainer = (props) => {
     const templateId = "first_template";
 
     //Validate data before sending Email
-    
+
     const fieldsEmpty = isFieldEmpty(data);
     if (fieldsEmpty) {
       setAlert(listFields(fieldsEmpty) + " blank. Failed to Submit!");
     } else {
-      if(validEmail){
-        sendEmail(templateId, emailData);
+      if (validEmail) {
+       !loader && sendEmail(templateId, emailData);
       } else {
         setAlert("Please enter a valid email address");
       }
@@ -100,10 +101,12 @@ const ContactContainer = (props) => {
   };
 
   const sendEmail = (templateId, email) => {
+    setLoader(true);
     emailjs
       .send("hotmail", templateId, email, "user_KkdEp8kM7ShrDPVgKin7a")
       .then(
         (response) => {
+          setLoader(false);
           console.log("SUCCESS!", response.status, response.text);
         },
         (err) => {
@@ -118,6 +121,7 @@ const ContactContainer = (props) => {
       darkModeContact={props.darkMode}
       data={data}
       validEmail={validEmail}
+      loader={loader}
       onChange={() => handleChange(event)}
       onSubmit={() => handleSubmit(event)}
     />

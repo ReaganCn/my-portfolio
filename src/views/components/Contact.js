@@ -71,9 +71,32 @@ const ContactComponent = (props) => {
 
         <button
           type="submit"
-          className={`border  w-4/12 md:w-2/12 h-10 mx-auto ${props.darkModeContact ? "bg-black text-white border-white hover:text-black hover:bg-white" : " bg-black text-white  m-3 border-black hover:text-black hover:bg-white"}`}
+          id="submit-form"
+          className={`border  w-4/12 md:w-2/12 h-10 mx-auto flex justify-center ${props.darkModeContact ? "bg-black text-white border-white hover:text-black hover:bg-white" : " bg-black text-white  m-3 border-black hover:text-black hover:bg-white"}`}
         >
-          Submit
+          {props.loader ? <span>
+            <svg version="1.1" id="submit-loader" 
+          viewBox="0 0 100 100" enableBackground="new 0 0 0 0" className="h-8 w-8 self-center flex justify-around">
+            <rect x="22" y="35" width="8" height="20" fill="#fff" id="rec-custom">
+              <animateTransform attributeType="xml"
+                attributeName="transform" type="translate"
+                values="0 0; 0 30; 0 0"
+                begin="0" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="42" y="35" width="8" height="20" fill="#fff" id="rec-custom">
+              <animateTransform attributeType="xml"
+                attributeName="transform" type="translate"
+                values="0 0; 0 30; 0 0"
+                begin="0.2s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+            <rect x="62" y="35" width="8" height="20" fill="#fff" id="rec-custom">
+              <animateTransform attributeType="xml"
+                attributeName="transform" type="translate"
+                values="0 0; 0 30; 0 0"
+                begin="0.4s" dur="0.6s" repeatCount="indefinite" />
+            </rect>
+        </svg>
+          </span> : <span className="self-center">Submit</span> }
         </button>
       </form>
     </div>

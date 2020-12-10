@@ -20,6 +20,11 @@ body {
   transform: rotate(-90deg);
 }
 
+#submit-form:hover #rec-custom {
+  fill: black;
+}
+
+
 @media screen and (min-width : 1520px)
   {
   #greetings {
