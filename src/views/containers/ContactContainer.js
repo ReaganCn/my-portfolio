@@ -10,7 +10,10 @@ const ContactContainer = (props) => {
     subject: "",
     message: "",
   });
-  const [alert, setAlert] = useState("");
+  const [alert, setAlert] = useState({
+    type: "",
+    message: ""
+  });
   const [validEmail, setvalidEmail] = useState(true);
   const [loader, setLoader] = useState(false);
 
@@ -89,12 +92,19 @@ const ContactContainer = (props) => {
 
     const fieldsEmpty = isFieldEmpty(data);
     if (fieldsEmpty) {
-      setAlert(listFields(fieldsEmpty) + " blank. Failed to Submit!");
+      const failedObj = {
+        type: "failed",
+        message: listFields(fieldsEmpty) + " blank. Failed to Submit!"
+      }
+      setAlert(failedObj);
     } else {
       if (validEmail) {
        !loader && sendEmail(templateId, emailData);
       } else {
-        setAlert("Please enter a valid email address");
+        setAlert({
+            type: "failed",
+            message: "Please enter a valid email address"
+          });
       }
     }
     event.preventDefault();
@@ -107,13 +117,26 @@ const ContactContainer = (props) => {
       .then(
         (response) => {
           setLoader(false);
-          console.log("SUCCESS!", response.status, response.text);
+          setAlert({
+            type:"success",
+            message: "SUCCESS! " + response.status + " " + response.text +". I will respond as soon as possible."
+          })
         },
         (err) => {
-          console.log("FAILED...", err);
+          setAlert({
+            type: "failed",
+            message: "FAILED... " + err
+          });
         }
       );
   };
+
+  function closeAlert () {
+    setAlert({
+      type:"",
+      message:""
+    })
+  }
 
   return (
     <ContactComponent
@@ -122,6 +145,8 @@ const ContactContainer = (props) => {
       data={data}
       validEmail={validEmail}
       loader={loader}
+      alert={alert}
+      closeAlert = {()=> closeAlert()}
       onChange={() => handleChange(event)}
       onSubmit={() => handleSubmit(event)}
     />
