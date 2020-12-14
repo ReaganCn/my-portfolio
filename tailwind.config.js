@@ -1,6 +1,11 @@
 module.exports = {
   future: {},
-  purge: [],
+  purge: [
+    './public/index.html',
+    './src/*.js',
+    './src/views/containers/*.js',
+    './src/views/components/*.js',
+  ],
   theme: {
     extend: {
       animation: {
