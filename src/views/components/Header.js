@@ -26,10 +26,10 @@ const HeaderComponent = (props) => {
             &lt;React.Fragment&gt;
           </span>
           <h1 className="lg:text-6xl text-5xl 2xl:text-7xl" id="greetings">
-            Hello ! <br /> I'm Charana Reagan
+            Hello! <br /> I'm Charana Reagan
           </h1>
           <h3 className="text-2xl text-gray-700 mt-6 md:mt-0" id="tagline">
-            A web developer based in Nairobi, Kenya.
+            A FullStack Developer based in Nairobi, Kenya.
           </h3>
           <span className="text-gray-500 font-thin absolute mt-12 right-0 xl:mr-64 hidden md:block lg:text-base text-xs">
             &lt;/<span className="font-space-mono">React.Fragment</span>&gt;
