@@ -55,31 +55,27 @@ const Projects = [
 const Skills = [
   {
     id: 51,
-    name: "JavaScript",
+    name: "Golang",
   },
   {
     id: 52,
-    name: "Tailwind CSS",
+    name: "NodeJs",
   },
   {
     id: 53,
-    name: "Bootstrap 4",
+    name: "AWS",
   },
   {
     id: 54,
-    name: "Git",
+    name: "Docker",
   },
   {
     id: 55,
-    name: "React",
+    name: "Kubernetes",
   },
   {
     id: 56,
-    name: "Redux",
-  },
-  {
-    id: 57,
-    name: "NodeJs",
+    name: "GCP",
   },
   {
     id: 58,
