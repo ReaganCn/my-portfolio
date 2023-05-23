@@ -20,7 +20,7 @@ const SkillsComponent = (props) => {
         {props.id == 55 && (
           <span className="self-center text-lg font-medium ml-3 text-react-blue tracking-wider">
             {" "}
-            Go
+            Golang
           </span>
         )}
       </div>
