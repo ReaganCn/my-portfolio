@@ -18,15 +18,8 @@ const ProjectsComponent = (props) => {
       <div
         id="img-section"
         className="md:w-2/4 w-full md:self-center md:ml-20 flex h-full md:my-0 my-10 mx-auto"
-        onMouseEnter={props.onMouseEnter}
-        onMouseLeave={props.onMouseLeave}
         {...props.swipeHandlers}
       >
-        <img
-          src={`public/imgs/projects/${props.title}.png`}
-          className={`w-full self-center md:-mb-12 ${props.showLinks ? "hidden" : ""}`}
-         
-        />
 
         <div
           id="project-links"

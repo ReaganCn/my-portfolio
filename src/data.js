@@ -37,7 +37,7 @@ const Projects = [
     description:
       "A web application developed to empower individuals and organizations with the ability to design bots without requiring a technical background.",
     technologies: ["NodeJs","Golang", "Google Cloud Platform"],
-    github: "https://github.com/ReaganCn/gravevideos-nodejs",
+    github: "https://github.com/italanta/elewa",
     live: ""
   },
   {
