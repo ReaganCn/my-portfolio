@@ -24,6 +24,10 @@ body {
   fill: black;
 }
 
+.golang-blue {
+  color: #72CEDD !important;
+}
+
 
 @media screen and (min-width : 1520px)
   {

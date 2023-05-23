@@ -18,7 +18,7 @@ const SkillsComponent = (props) => {
           id="skill-image"
         />
         {props.id == 55 && (
-          <span className="self-center text-lg font-medium ml-3 text-react-blue tracking-wider">
+          <span className="self-center text-lg font-medium ml-3 tracking-wider golang-blue">
             {" "}
             Golang
           </span>
