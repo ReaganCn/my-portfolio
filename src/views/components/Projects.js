@@ -23,7 +23,7 @@ const ProjectsComponent = (props) => {
 
         <div
           id="project-links"
-          className={`md:w-auto md:self-center mx-auto ${props.showLinks ? "" : "hidden"}`}
+          className={`md:w-auto md:self-center mx-auto`}
         >
           <div className="flex flex-col self-center text-lg mx-auto font-semibold">
             <span className="flex">
