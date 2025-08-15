@@ -16,17 +16,17 @@ const Projects = [
     title: "Spotlights",
     description:
       "Lead development of an MVP for an hr tech startup that enabled recruiters to upload CVs of 'second best' candidates, providing companies with access to quality talent. The MVP was built using Angular and Node.js",
-    technologies: ["Angular", "GCP","NodeJs"],
+    technologies: ["Angular", "AWS","NodeJs"],
     github: "https://github.com/ReaganCn/telegram-gpt",
     live: ""
   },
   {
     id: 23,
     icon: "fas fa-code",
-    title: "Elewa Conversational Learning Manager",
+    title: "Goomza(Elewa Conversational Learning Manager)",
     description:
       "A web application developed to empower individuals and organizations with the ability to design bots without requiring a technical background.",
-    technologies: ["Angular","NodeJs", "Google Cloud Platform"],
+    technologies: ["Angular","NodeJs", "AWS", "GCP(Dialogflow)"],
     github: "https://github.com/italanta/elewa",
     live: ""
   },
