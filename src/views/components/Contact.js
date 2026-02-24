@@ -13,12 +13,6 @@ const ContactComponent = (props) => {
         >
           Contact
         </p>
-                    <p
-          className="font-space-mono text-xs tracking-wider md:ml-auto -ml-4"
-          id="skills-header"
-        >
-          reaganones@gmail.com or +254 710969595
-        </p>
       </span>
       <div
         className={`${
@@ -44,6 +38,7 @@ const ContactComponent = (props) => {
       </div>
       <div className="m-3 text-center mt-0 md:ml-0">
         <h1 className=" text-3xl font-bold">Get in touch.</h1>
+           <h3 className=" text-sm">reaganones@gmail.com or +254 710969595</h3>         
       </div>
       <form
         className="flex md:w-6/12 w-11/12 md:mx-auto flex-col mx-auto"
