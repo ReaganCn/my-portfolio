@@ -13,6 +13,12 @@ const ContactComponent = (props) => {
         >
           Contact
         </p>
+                    <p
+          className="font-space-mono text-xs tracking-wider md:ml-auto -ml-4"
+          id="skills-header"
+        >
+          reaganones@gmail.com or +254 710969595
+        </p>
       </span>
       <div
         className={`${
