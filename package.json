@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "NODE_ENV=production webpack --mode production"
+    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack serve --mode development",
+    "build": "cross-env NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +16,8 @@
     "@babel/preset-react": "^7.12.1",
     "autoprefixer": "^10.0.2",
     "babel-loader": "^8.1.0",
-    "css-loader": "^5.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.7",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.2.1",
     "postcss-cli": "^8.1.0",
@@ -24,14 +25,13 @@
     "style-loader": "^2.0.0",
     "tailwindcss": "^2.0.1",
     "webpack": "^5.3.0",
-    "webpack-cli": "^4.1.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.15.2"
   },
   "dependencies": {
     "emailjs-com": "^2.6.3",
     "postcss": "^8.1.10",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-swipeable": "^6.0.0"
+    "react-dom": "^17.0.1"
   }
 }

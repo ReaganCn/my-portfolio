@@ -1,44 +1,100 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Skills } from "../../data";
 import SkillsContainer from "../containers/SkillsContainer";
+import SplitLines from "./fx/SplitLines";
+import Reveal from "./fx/Reveal";
+import Clock from "./fx/Clock";
+import useTypewriter from "../../hooks/useTypewriter";
+import useLerpFollow from "../../hooks/useLerpFollow";
+import useReducedMotion from "../../hooks/useReducedMotion";
 
-const HeaderComponent = (props) => {
+const finePointer = () =>
+  typeof window !== "undefined" &&
+  !!window.matchMedia &&
+  window.matchMedia("(pointer: fine)").matches;
+
+const Typed = ({ text, delay, className, caret = false }) => {
+  const [shown, done] = useTypewriter(text, { delay });
   return (
-    <div id="header" className="relative flex flex-col w-full mx-auto" 
-    // style={{backgroundImage:"url('public/imgs/background-1.jpg')"}}
-    >
-      <div>
-        <img
-          src="public/imgs/background-1.jpg"
-          className={`absolute z-0 -mt-32  ${props.darkMode ? "" : "lg:block"} hidden xl:w-full`}
-        />
-        <img
-          src="public/imgs/background-2.jpg"
-          className={`absolute z-0 -mt-56 w-full ${props.darkMode ? "lg:block" : ""} hidden`}
-        />
-      </div>
+    <span className={className}>
+      <span className="sr-only">{text}</span>
+      <span aria-hidden="true">
+        {shown}
+        {caret && <span className={`caret ${done ? "is-blinking" : ""}`} />}
+      </span>
+    </span>
+  );
+};
+
+const HeaderComponent = () => {
+  const heroRef = useRef(null);
+  const blobRef = useRef(null);
+  const reduced = useReducedMotion();
+  const [fine] = useState(finePointer);
+  const follow = fine && !reduced;
+
+  useLerpFollow(blobRef, { ease: 0.06, enabled: follow, relativeTo: heroRef });
+
+  return (
+    <section id="top" className="hero" ref={heroRef}>
       <div
-        id="header-title"
-        className="flex items-center justify-center flex-col mt-10 pl-6 lg:mt-48 xl:mt-48 lg:z-10 md:mx-auto w-full"
+        ref={blobRef}
+        className={`hero__blob-anchor ${follow ? "" : "is-static"}`}
+        aria-hidden="true"
       >
-        <div>
-          <span className="text-gray-500 font-thin absolute lg:-mt-20 -mt-12 -ml-32 font-space-mono hidden md:block lg:text-base text-xs">
-            &lt;React.Fragment&gt;
-          </span>
-          <h1 className="lg:text-6xl text-5xl 2xl:text-7xl" id="greetings">
-            Hello! <br /> I'm Charana Reagan
-          </h1>
-          <h3 className="text-2xl text-gray-700 mt-6 md:mt-0" id="tagline">
-            A Senior Software Engineer based in Nairobi, Kenya.
-          </h3>
-          <span className="text-gray-500 font-thin absolute mt-12 right-0 xl:mr-64 hidden md:block lg:text-base text-xs">
-            &lt;/<span className="font-space-mono">React.Fragment</span>&gt;
-            <span className="mr-32"></span>
-          </span>
-        </div>
+        <span className="hero__blob" />
       </div>
-      <SkillsContainer data={Skills}/>
-    </div>
+
+      <div className="hero__inner container">
+        <p className="hero__prompt mono">
+          <span className="accent-ink" aria-hidden="true">
+            &gt;{" "}
+          </span>
+          <Typed text="hello, world" delay={150} caret />
+        </p>
+
+        <Typed text="<React.Fragment>" delay={900} className="hero__tag mono" />
+
+        <SplitLines
+          as="h1"
+          className="hero__title"
+          label="Hello! I'm Charana Reagan"
+          delay={250}
+          stagger={110}
+          lines={[
+            "Hello!",
+            <>
+              I'm Charana <em className="serif hl">Reagan</em>
+            </>,
+          ]}
+        />
+
+        <Reveal as="p" className="hero__tagline" delay={650}>
+          A Senior Software Engineer based in Nairobi, Kenya.
+        </Reveal>
+
+        <Typed
+          text="</React.Fragment>"
+          delay={1500}
+          className="hero__tag hero__tag--close mono"
+        />
+
+        <Reveal className="hero__meta mono" delay={900}>
+          <span className="hero__pulse" aria-hidden="true" />
+          <span>Nairobi, KE</span>
+          <span className="muted" aria-hidden="true">
+            /
+          </span>
+          <Clock />
+        </Reveal>
+      </div>
+
+      <a href="#skills" className="scroll-cue mono" aria-label="Scroll to skills">
+        scroll <span className="scroll-cue__arrow">↓</span>
+      </a>
+
+      <SkillsContainer data={Skills} />
+    </section>
   );
 };
 

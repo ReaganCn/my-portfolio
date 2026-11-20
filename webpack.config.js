@@ -1,11 +1,12 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-devServer: {
-  open: true
-}
-
 module.exports = {
+  devServer: {
+    // Serve the repo root so "public/imgs/..." paths resolve like they do in dist/.
+    static: { directory: __dirname, watch: false },
+    port: 8080,
+  },
   module: {
     rules: [
       {

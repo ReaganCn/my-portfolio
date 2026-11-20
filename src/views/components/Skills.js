@@ -1,31 +1,20 @@
-import React, { Fragment } from "react";
+import React from "react";
 
-const SkillsComponent = (props) => {
-  return (
-    <Fragment>
-      <div
-        id="skill"
-        className={`${
-          props.id == 55 && "flex"
-        } flex my-6 w-4/12 md:w-3/12 lg:w-auto md:my-4 lg:my-0 justify-center`}
-      >
-        <img
-          className={`md:h-10 md:w-auto w-auto h-8 justify-self-start ${
-            props.id == 55 && "animate-spin-slow"
-          }`}
-          src={`public/imgs/skills_logos/${props.id}.png`}
-          alt={`${props.name}`}
-          id="skill-image"
-        />
-        {props.id == 55 && (
-          <span className="self-center text-lg font-medium ml-3 tracking-wider golang-blue">
-            {" "}
-            Golang
-          </span>
-        )}
-      </div>
-    </Fragment>
-  );
-};
+const SkillsComponent = ({ name, logo }) => (
+  <li className="skill">
+    {logo && (
+      <img
+        className="skill__logo"
+        src={`public/imgs/skills_logos/${logo}`}
+        alt=""
+        draggable="false"
+      />
+    )}
+    <span className="skill__name mono">{name}</span>
+    <span className="skill__sep" aria-hidden="true">
+      ✱
+    </span>
+  </li>
+);
 
 export default SkillsComponent;

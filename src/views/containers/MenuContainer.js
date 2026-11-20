@@ -1,21 +1,33 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import MenuComponent from "../components/Menu";
+import useScrollProgress from "../../hooks/useScrollProgress";
 
-const MenuContainer = (props) => {
-  const [show, setShow] = useState(false);
+const MenuContainer = ({ theme, toggleTheme }) => {
+  const [open, setOpen] = useState(false);
+  const progressRef = useRef(null);
+  const scrolled = useScrollProgress(progressRef);
 
-  const showMiniMenu = () => {
-    show ? setShow(false) : setShow(true);
-  };
-
-
+  // Lock page scroll and allow Escape while the mobile overlay is open.
+  useEffect(() => {
+    if (!open) return undefined;
+    const onKey = (e) => e.key === "Escape" && setOpen(false);
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", onKey);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKey);
+    };
+  }, [open]);
 
   return (
     <MenuComponent
-      darkMode = {props.darkMode}
-      setDark ={props.toggleDark}
-      onClick={() => showMiniMenu()}
-      show={show}
+      theme={theme}
+      toggleTheme={toggleTheme}
+      open={open}
+      toggleOpen={() => setOpen((o) => !o)}
+      close={() => setOpen(false)}
+      scrolled={scrolled}
+      progressRef={progressRef}
     />
   );
 };

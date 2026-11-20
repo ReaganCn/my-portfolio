@@ -1,70 +1,58 @@
 import React from "react";
+import Reveal from "./fx/Reveal";
+import ScrambleText from "./fx/ScrambleText";
+import useScramble from "../../hooks/useScramble";
 
-const ProjectsComponent = (props) => {
-  const isOdd = (number) => {
-    if (number % 2 === 0) {
-      return false;
-    } else {
-      return true;
-    }
-  };
+const ProjectLink = ({ href, label }) => (
+  <a href={href} target="_blank" rel="noopener noreferrer" className="project__link mono">
+    {label}
+    <span className="project__arrow" aria-hidden="true">
+      ↗
+    </span>
+  </a>
+);
+
+const ProjectsComponent = ({
+  index,
+  title,
+  role,
+  period,
+  place,
+  description,
+  technologies,
+  github,
+  live,
+}) => {
+  const num = String(index).padStart(2, "0");
+  const [frame, run] = useScramble(num, { duration: 350 });
+  const hasLinks = !!(github || live);
+  const meta = [role, period, place].filter(Boolean).join(" · ");
+
   return (
-    <div
-      id="project1"
-      className={`flex mb-32 ${
-        isOdd(props.id) && "md:flex-row-reverse"
-      } flex-col md:flex-row md:w-full w-11/12 mx-auto`}
-    >
-      <div
-        id="img-section"
-        className="md:w-2/4 w-full md:self-center md:ml-20 flex h-full md:my-0 my-10 mx-auto"
-        {...props.swipeHandlers}
-      >
+    <Reveal as="li" className="project" onMouseEnter={run}>
+      <ScrambleText className="project__idx mono" text={num} frame={frame} />
 
-        <div
-          id="project-links"
-          className={`md:w-auto md:self-center mx-auto`}
-        >
-          <div className="flex flex-col self-center text-lg mx-auto font-semibold">
-            <span className="flex">
-              <a href={`${props.github}`} target="_blank">
-                <i className="fab fa-github self-center"></i>&nbsp; Github
-              </a>
-            </span>
-            <br />
-            <span className="flex">
-              <a href={`${props.live}`} target="_blank">
-                <i className="fas fa-bolt self-center"></i>&nbsp; Live
-              </a>
-            </span>
-          </div>
+      <div className="project__main">
+        {meta && <p className="project__meta mono">{meta}</p>}
+        <h3 className="project__title">{title}</h3>
+        <p className="project__desc">{description}</p>
+      </div>
+
+      <div className="project__side">
+        <ul className="project__tags" aria-label="Technologies">
+          {technologies.map((t) => (
+            <li key={t} className="tag-pill mono">
+              {t}
+            </li>
+          ))}
+        </ul>
+        <div className="project__links">
+          {github && <ProjectLink href={github} label="github" />}
+          {live && <ProjectLink href={live} label="live" />}
+          {!hasLinks && <span className="project__private mono">private · client work</span>}
         </div>
       </div>
-      <div
-        id="info"
-        className="flex md:w-2/4 w-full flex-col mx-auto text-center"
-      >
-        <div
-          id="title"
-          className=" text-center md:text-xl text-lg font-semibold my-2"
-        >
-          <i className={`${props.icon}`}></i>
-          <h2>{props.title}</h2>
-        </div>
-        <div
-          id="description"
-          className="md:w-2/3 w-full mx-auto md:text-base text-sm"
-        >
-          <p className="text-left md:mx-auto mx-2">{props.description}</p>
-          <h3 className=" my-2 font-space-mono md:ml-1 mx-2 text-left">
-            Technologies:
-          </h3>
-          <ul className="list-disc font-space-mono list-inside text-left ml-2">
-            {props.technologies}
-          </ul>
-        </div>
-      </div>
-    </div>
+    </Reveal>
   );
 };
 

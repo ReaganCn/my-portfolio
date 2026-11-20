@@ -1,28 +1,20 @@
 module.exports = {
   future: {},
-  purge: [
-    './public/index.html',
-    './src/*.js',
-    './src/views/containers/*.js',
-    './src/views/components/*.js',
-  ],
+  purge: ["./public/index.html", "./src/**/*.js"],
   theme: {
     extend: {
-      animation: {
-        "spin-slow": "spin 4s linear infinite",
-      },
       colors: {
-        "react-blue": "#00d8ff",
+        bg: "var(--bg)",
+        fg: "var(--fg)",
+        muted: "var(--muted)",
+        accent: "var(--accent)",
+        "accent-ink": "var(--accent-ink)",
       },
-      fill: (theme) => ({
-        red: theme("colors.red.500"),
-        green: theme("colors.green.500"),
-        blue: theme("colors.blue.500"),
-        black: theme("colors.black")
-      }),
     },
     fontFamily: {
-      "space-mono": ["Space Mono"],
+      sans: ["Rubik", "system-ui", "sans-serif"],
+      mono: ["Space Mono", "ui-monospace", "monospace"],
+      serif: ["Instrument Serif", "Georgia", "serif"],
     },
   },
   variants: {},

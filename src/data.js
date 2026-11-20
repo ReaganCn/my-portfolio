@@ -1,90 +1,101 @@
+// Projects mirror the client engagements on the CV (newest first), plus open-source work.
+// `github` / `live` render as links only when non-empty; otherwise the row shows "private · client work".
 const Projects = [
-
   {
-    id: 25,
-    icon: "fas fa-globe-americas",
-    title: "DomainCatch",
+    id: 31,
+    title: "Goodless",
+    role: "Senior Software Engineer",
+    period: "2025 — now",
+    place: "Belgium, remote",
     description:
-      "The project involved creating an efficient and scalable service that can quickly catch expired domains and make them available for purchase through an easy to navigate platform showcasing domains for sale and for bidding.",
-    technologies: ["Angular 14","Typescript", "Nodejs"],
+      "RFID-enabled payments and reusable-cup tracking for live events, sustaining 5,000+ simultaneous transactions. Go and Python services run in Docker on Linux edge devices beside smart bins and mats, with an offline-first sync layer (local queues, idempotent replay) so scanning and payments keep working when the venue's connection drops. The backend runs on Kubernetes in AWS at 99%+ uptime through peak event load.",
+    technologies: ["Go", "Python", "Docker", "Kubernetes", "AWS", "Prometheus", "Grafana"],
     github: "",
-    live: ""
+    live: "",
   },
   {
-    id: 24,
-    icon: "fas fa-code",
-    title: "Spotlights",
+    id: 30,
+    title: "Goomza",
+    role: "Senior Software Engineer",
+    period: "2023 — 2024",
+    place: "Nairobi",
     description:
-      "Lead development of an MVP for an hr tech startup that enabled recruiters to upload CVs of 'second best' candidates, providing companies with access to quality talent. The MVP was built using Angular and Node.js",
-    technologies: ["Angular", "AWS","NodeJs"],
-    github: "https://github.com/ReaganCn/telegram-gpt",
-    live: ""
-  },
-  {
-    id: 23,
-    icon: "fas fa-code",
-    title: "Goomza(Elewa Conversational Learning Manager)",
-    description:
-      "A web application developed to empower individuals and organizations with the ability to design bots without requiring a technical background.",
-    technologies: ["Angular","NodeJs", "AWS", "GCP(Dialogflow)"],
+      "Led the move of a conversational learning platform from rule-based logic to an LLM/RAG architecture, serving 10,000+ active users at 99% uptime. Built Go and Python services and gRPC gateways for partner integrations, moved the core services onto Kubernetes (EKS) with Helm and Terraform, and created a no-code chatbot builder for non-technical users.",
+    technologies: ["Go", "Python", "Node.js", "LLMs & RAG", "gRPC", "Kubernetes", "Terraform"],
     github: "https://github.com/italanta/elewa",
-    live: ""
+    live: "",
   },
   {
-    id: 22,
-    icon: "fas fa-address-card",
-    title: "My portfolio",
+    id: 29,
+    title: "Spotlights",
+    role: "Full-stack Engineer",
+    period: "2022",
+    place: "Brussels",
     description:
-      "This website is a redesign of my previous portfolio for speed and efficiency",
-    technologies: ["HTML5","Javascript", "React Js", "Tailwind CSS"],
-    github: "https://github.com/ReaganCn/my-portfolio",
-    live: "https://charanareagan.netlify.app/"
+      "A talent-matching platform with complex search over a large candidate pool. Built the backend APIs and data models, tuned PostgreSQL indexes and queries to keep search fast as the pool grew, and built the React interfaces for recruiter search, with GDPR-compliant handling of candidate data.",
+    technologies: ["Node.js", "React", "PostgreSQL"],
+    github: "",
+    live: "",
   },
-    {
-    id: 21,
-    icon: "fas fa-play-circle",
-    title: "Filewatch",
+  {
+    id: 28,
+    title: "Domeincatch",
+    role: "Backend Engineer — Go",
+    period: "2022",
+    place: "Brussels, remote",
     description:
-      "A file monitoring Golang command line tool that can watch for modifications, creations and deletions of files and folders and send an event",
-    technologies: ["Golang","AWS", "Docker","Amazon ECS","SQLite"],
+      "A platform for catching expiring domains and bidding on them. Built Go backend services on AWS, hosted close to the domain registries, and tuned TLS session reuse and TCP connection handling to bring registry communication into the microsecond range. Automated the scheduling, bidding and monitoring pipelines that kept it available during peak bidding.",
+    technologies: ["Go", "AWS", "TCP/TLS", "DNS"],
+    github: "",
+    live: "",
+  },
+  {
+    id: 27,
+    title: "Novacom Systems",
+    role: "Software Consultant",
+    period: "2019 — 2022",
+    place: "Nairobi",
+    description:
+      "ERP, payment and reporting software for clients, often installed on their own servers in offices with unreliable internet. Integrated client systems with banks, mobile money APIs and accounting tools, including the reconciliation edge cases, and ran requirements workshops and user training.",
+    technologies: ["Node.js", "Python", "MySQL"],
+    github: "",
+    live: "",
+  },
+  {
+    id: 21,
+    title: "Filewatch",
+    role: "Open source",
+    period: "",
+    place: "",
+    description:
+      "A Golang command-line tool that watches files and folders for modifications, creations and deletions and sends an event for each.",
+    technologies: ["Go", "Docker", "Amazon ECS", "SQLite"],
     github: "https://github.com/ReaganCn/filewatch",
-    live: ""
+    live: "",
   },
 ];
 
+// `logo` is a file in public/imgs/skills_logos/ (and dist/public/imgs/skills_logos/ for the live site).
+// Skills without a logo render as text only.
 const Skills = [
-  {
-    id: 51,
-    name: "Golang",
-  },
-  {
-    id: 52,
-    name: "NodeJs",
-  },
-  {
-    id: 53,
-    name: "AWS",
-  },
-  {
-    id: 54,
-    name: "Docker",
-  },
-  {
-    id: 55,
-    name: "Kubernetes",
-  },
-  {
-    id: 56,
-    name: "GCP",
-  },
-  {
-    id: 58,
-    name: "MongoDB",
-  },
-  {
-    id: 59,
-    name: "SQL",
-  },
+  { id: 1, name: "Go", logo: "55.png" },
+  { id: 2, name: "Python" },
+  { id: 3, name: "Node.js", logo: "56.png" },
+  { id: 4, name: "Kubernetes" },
+  { id: 5, name: "Docker" },
+  { id: 6, name: "AWS", logo: "54.png" },
+  { id: 7, name: "Terraform" },
+  { id: 8, name: "gRPC" },
+  { id: 9, name: "MQTT" },
+  { id: 10, name: "PostgreSQL" },
+  { id: 11, name: "MongoDB", logo: "58.png" },
+  { id: 12, name: "Redis" },
+  { id: 13, name: "Prometheus & Grafana" },
+  { id: 14, name: "LLMs & RAG" },
+  { id: 15, name: "CI/CD", logo: "52.png" },
+  { id: 16, name: "React", logo: "react.png" },
+  { id: 17, name: "Angular", logo: "533.png" },
+  { id: 18, name: "TypeScript" },
 ];
 
 export { Projects, Skills };
