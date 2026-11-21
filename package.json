@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "cross-env NODE_OPTIONS=--openssl-legacy-provider webpack serve --mode development",
-    "build": "cross-env NODE_ENV=production NODE_OPTIONS=--openssl-legacy-provider webpack --mode production"
+    "start": "webpack serve --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production"
   },
   "author": "",
   "license": "ISC",

@@ -3,7 +3,7 @@ import emailjs from "emailjs-com";
 
 import ContactComponent from "../components/Contact";
 
-const EMAIL = "reaganones@gmail.com";
+const EMAIL = "charanareagan@hotmail.com";
 const PHONE = "+254 710 969 595";
 
 const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
